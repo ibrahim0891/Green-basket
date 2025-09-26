@@ -1,0 +1,52 @@
+{
+    "reviews": [
+        {
+            "id": 1,
+            "productId": 101,
+            "user": "Kristin Watson",
+            "rating": 4,
+            "comment": "Duis at ullamcorper nulla, eu dictum eros.",
+            "date": "2025-09-26T09:10:00Z"
+        },
+        {
+            "id": 2,
+            "productId": 101,
+            "user": "Jane Cooper",
+            "rating": 5,
+            "comment": "Keep the soil evenly moist for the healthiest growth...",
+            "date": "2021-04-30T12:00:00Z"
+        },
+        {
+            "id": 3,
+            "productId": 101,
+            "user": "Jacob Jones",
+            "rating": 4,
+            "comment": "Vivamus eget euismod magna. Nam sed lacinia nibh.",
+            "date": "2025-09-26T09:12:00Z"
+        },
+        {
+            "id": 4,
+            "productId": 101,
+            "user": "Ralph Edwards",
+            "rating": 5,
+            "comment": "200+ Canton Pak Choi Bok Choy seeds...",
+            "date": "2025-09-26T09:15:00Z"
+        },
+        {
+            "id": 5,
+            "productId": 102,
+            "user": "Emily Carter",
+            "rating": 5,
+            "comment": "Sweetest mangoes ever, juicy and fresh!",
+            "date": "2025-09-20T08:00:00Z"
+        },
+        {
+            "id": 6,
+            "productId": 103,
+            "user": "Michael Brown",
+            "rating": 4,
+            "comment": "Great taste, but a little pricey.",
+            "date": "2025-09-21T10:30:00Z"
+        }
+    ]
+}

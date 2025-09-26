@@ -1,0 +1,824 @@
+{
+    "products": [
+        {
+            "id": 101,
+            "name": "Chinese Cabbage",
+            "image": "https://picsum.photos/seed/cabbage/400/400",
+            "price": 17.28,
+            "oldPrice": 48.0,
+            "discount": "64%",
+            "stockStatus": "In Stock",
+            "brand": "Fairway",
+            "categoryId": 2,
+            "tags": [
+                "Vegetables",
+                "Healthy",
+                "Chinese",
+                "Green Cabbage"
+            ],
+            "rating": 4.5,
+            "reviews": 120,
+            "description": "Fresh, crisp Chinese cabbage, perfect for stir-fries, salads, or traditional Asian dishes. Organically grown and packed with essential vitamins."
+        },
+        {
+            "id": 102,
+            "name": "Fresh Mango",
+            "image": "https://picsum.photos/seed/mango/400/400",
+            "price": 9.99,
+            "oldPrice": 12.99,
+            "discount": "23%",
+            "stockStatus": "In Stock",
+            "brand": "Tropical Fresh",
+            "categoryId": 1,
+            "tags": [
+                "Fruit",
+                "Sweet",
+                "Seasonal"
+            ],
+            "rating": 4.8,
+            "reviews": 250,
+            "description": "Juicy and sweet fresh mangoes, hand-picked at peak ripeness. A delightful tropical treat, rich in Vitamin C and antioxidants."
+        },
+        {
+            "id": 103,
+            "name": "River Salmon",
+            "image": "https://picsum.photos/seed/salmon/400/400",
+            "price": 25.5,
+            "oldPrice": 30.0,
+            "discount": "15%",
+            "stockStatus": "In Stock",
+            "brand": "Blue River",
+            "categoryId": 3,
+            "tags": [
+                "Fish",
+                "Protein",
+                "Fresh"
+            ],
+            "rating": 4.7,
+            "reviews": 180,
+            "description": "Premium quality river salmon, sustainably sourced and known for its rich flavor and high Omega-3 content. Perfect for grilling or baking."
+        },
+        {
+            "id": 104,
+            "name": "Organic Broccoli",
+            "image": "https://picsum.photos/seed/broccoli/400/400",
+            "price": 4.50,
+            "oldPrice": 5.25,
+            "discount": "14%",
+            "stockStatus": "In Stock",
+            "brand": "Green Harvest",
+            "categoryId": 2,
+            "tags": [
+                "Vegetables",
+                "Organic",
+                "Healthy",
+                "Green"
+            ],
+            "rating": 4.6,
+            "reviews": 95,
+            "description": "Fresh, organic broccoli florets, packed with nutrients. Ideal for steaming, roasting, or adding to your favorite stir-fry."
+        },
+        {
+            "id": 105,
+            "name": "Avocado (Hass)",
+            "image": "https://picsum.photos/seed/avocado/400/400",
+            "price": 2.99,
+            "oldPrice": 3.50,
+            "discount": "15%",
+            "stockStatus": "In Stock",
+            "brand": "AvoGood",
+            "categoryId": 1,
+            "tags": [
+                "Fruit",
+                "Healthy Fats",
+                "Creamy"
+            ],
+            "rating": 4.7,
+            "reviews": 210,
+            "description": "Creamy Hass avocados, perfect for guacamole, salads, or a healthy snack. Rich in monounsaturated fats and essential vitamins."
+        },
+        {
+            "id": 106,
+            "name": "Chicken Breast (Boneless)",
+            "image": "https://picsum.photos/seed/chickenbreast/400/400",
+            "price": 12.00,
+            "oldPrice": 14.50,
+            "discount": "17%",
+            "stockStatus": "In Stock",
+            "brand": "Farm Fresh",
+            "categoryId": 3,
+            "tags": [
+                "Meat",
+                "Poultry",
+                "Protein"
+            ],
+            "rating": 4.6,
+            "reviews": 300,
+            "description": "Lean, boneless chicken breasts, versatile for a variety of healthy meals. Great for grilling, baking, or stir-frying."
+        },
+        {
+            "id": 107,
+            "name": "Whole Wheat Bread",
+            "image": "https://picsum.photos/seed/wholewheatbread/400/400",
+            "price": 3.75,
+            "oldPrice": 4.25,
+            "discount": "12%",
+            "stockStatus": "In Stock",
+            "brand": "Bakery Delights",
+            "categoryId": 4,
+            "tags": [
+                "Bakery",
+                "Whole Grain",
+                "Staple"
+            ],
+            "rating": 4.4,
+            "reviews": 150,
+            "description": "Hearty whole wheat bread, baked fresh daily. A nutritious choice for sandwiches or toast, packed with fiber."
+        },
+        {
+            "id": 108,
+            "name": "Greek Yogurt (Plain)",
+            "image": "https://picsum.photos/seed/greekyogurt/400/400",
+            "price": 5.99,
+            "oldPrice": 6.50,
+            "discount": "8%",
+            "stockStatus": "In Stock",
+            "brand": "Dairy Pure",
+            "categoryId": 5,
+            "tags": [
+                "Dairy",
+                "Protein",
+                "Probiotic"
+            ],
+            "rating": 4.9,
+            "reviews": 400,
+            "description": "Thick and creamy plain Greek yogurt, rich in protein and probiotics. Perfect for breakfast, smoothies, or as a healthy snack."
+        },
+        {
+            "id": 109,
+            "name": "Red Delicious Apples",
+            "image": "https://picsum.photos/seed/redapples/400/400",
+            "price": 1.99,
+            "oldPrice": 2.50,
+            "discount": "20%",
+            "stockStatus": "In Stock",
+            "brand": "Orchard Fresh",
+            "categoryId": 1,
+            "tags": [
+                "Fruit",
+                "Sweet",
+                "Crisp"
+            ],
+            "rating": 4.5,
+            "reviews": 190,
+            "description": "Crisp and sweet Red Delicious apples, a classic snack. Great for eating fresh or in fruit salads."
+        },
+        {
+            "id": 110,
+            "name": "Spinach (Baby)",
+            "image": "https://picsum.photos/seed/babyspinach/400/400",
+            "price": 3.20,
+            "oldPrice": 3.70,
+            "discount": "14%",
+            "stockStatus": "In Stock",
+            "brand": "Garden Greens",
+            "categoryId": 2,
+            "tags": [
+                "Vegetables",
+                "Leafy Green",
+                "Healthy"
+            ],
+            "rating": 4.6,
+            "reviews": 110,
+            "description": "Tender baby spinach leaves, pre-washed and ready to eat. Excellent in salads, smoothies, or lightly sautéed."
+        },
+        {
+            "id": 111,
+            "name": "Ground Beef (Lean)",
+            "image": "https://picsum.photos/seed/groundbeef/400/400",
+            "price": 9.50,
+            "oldPrice": 11.00,
+            "discount": "14%",
+            "stockStatus": "In Stock",
+            "brand": "Butcher's Best",
+            "categoryId": 3,
+            "tags": [
+                "Meat",
+                "Beef",
+                "Lean Protein"
+            ],
+            "rating": 4.7,
+            "reviews": 280,
+            "description": "Premium lean ground beef, perfect for tacos, burgers, or bolognese. Minimally processed and high in protein."
+        },
+        {
+            "id": 112,
+            "name": "Artisan Sourdough Loaf",
+            "image": "https://picsum.photos/seed/sourdough/400/400",
+            "price": 6.99,
+            "oldPrice": 7.50,
+            "discount": "7%",
+            "stockStatus": "In Stock",
+            "brand": "Local Bakehouse",
+            "categoryId": 4,
+            "tags": [
+                "Bakery",
+                "Artisan",
+                "Rustic"
+            ],
+            "rating": 4.8,
+            "reviews": 160,
+            "description": "Authentic artisan sourdough bread with a crispy crust and chewy interior. Made with a traditional slow-fermentation process."
+        },
+        {
+            "id": 113,
+            "name": "Cheddar Cheese Block",
+            "image": "https://picsum.photos/seed/cheddarcheese/400/400",
+            "price": 7.25,
+            "oldPrice": 8.00,
+            "discount": "9%",
+            "stockStatus": "In Stock",
+            "brand": "Creamy Farms",
+            "categoryId": 5,
+            "tags": [
+                "Dairy",
+                "Cheese",
+                "Versatile"
+            ],
+            "rating": 4.6,
+            "reviews": 220,
+            "description": "A block of rich and flavorful cheddar cheese. Perfect for grating, slicing, or melting into your favorite dishes."
+        },
+        {
+            "id": 114,
+            "name": "Bananas (Organic)",
+            "image": "https://picsum.photos/seed/organicbananas/400/400",
+            "price": 1.19,
+            "oldPrice": 1.40,
+            "discount": "15%",
+            "stockStatus": "In Stock",
+            "brand": "EcoHarvest",
+            "categoryId": 1,
+            "tags": [
+                "Fruit",
+                "Organic",
+                "Energy"
+            ],
+            "rating": 4.7,
+            "reviews": 320,
+            "description": "Sweet organic bananas, a quick and easy source of energy. Great for snacks, smoothies, or baking."
+        },
+        {
+            "id": 115,
+            "name": "Carrots (Baby)",
+            "image": "https://picsum.photos/seed/babycarrots/400/400",
+            "price": 2.50,
+            "oldPrice": 2.99,
+            "discount": "16%",
+            "stockStatus": "In Stock",
+            "brand": "Field Fresh",
+            "categoryId": 2,
+            "tags": [
+                "Vegetables",
+                "Snackable",
+                "Vitamin A"
+            ],
+            "rating": 4.5,
+            "reviews": 130,
+            "description": "Convenient baby carrots, peeled and ready to enjoy. A crunchy, healthy snack rich in Vitamin A."
+        },
+        {
+            "id": 116,
+            "name": "Pork Chops (Bone-in)",
+            "image": "https://picsum.photos/seed/porkchops/400/400",
+            "price": 10.50,
+            "oldPrice": 12.00,
+            "discount": "12%",
+            "stockStatus": "In Stock",
+            "brand": "Heritage Meats",
+            "categoryId": 3,
+            "tags": [
+                "Meat",
+                "Pork",
+                "Dinner"
+            ],
+            "rating": 4.4,
+            "reviews": 90,
+            "description": "Flavorful bone-in pork chops, perfect for a satisfying dinner. Best grilled, pan-fried, or baked."
+        },
+        {
+            "id": 117,
+            "name": "Gluten-Free Pasta",
+            "image": "https://picsum.photos/seed/glutenfreepasta/400/400",
+            "price": 4.99,
+            "oldPrice": 5.50,
+            "discount": "9%",
+            "stockStatus": "In Stock",
+            "brand": "Healthy Grain",
+            "categoryId": 4,
+            "tags": [
+                "Pantry",
+                "Gluten-Free",
+                "Pasta"
+            ],
+            "rating": 4.3,
+            "reviews": 75,
+            "description": "Delicious gluten-free pasta, made from brown rice. A great alternative for those with dietary restrictions without sacrificing taste."
+        },
+        {
+            "id": 118,
+            "name": "Almond Milk (Unsweetened)",
+            "image": "https://picsum.photos/seed/almondmilk/400/400",
+            "price": 3.00,
+            "oldPrice": 3.49,
+            "discount": "14%",
+            "stockStatus": "In Stock",
+            "brand": "Nutty Delights",
+            "categoryId": 5,
+            "tags": [
+                "Dairy Alternative",
+                "Plant-Based",
+                "Beverage"
+            ],
+            "rating": 4.8,
+            "reviews": 270,
+            "description": "Creamy unsweetened almond milk, a dairy-free alternative. Excellent in coffee, cereals, or smoothies."
+        },
+        {
+            "id": 119,
+            "name": "Strawberries (Fresh)",
+            "image": "https://picsum.photos/seed/strawberries/400/400",
+            "price": 4.25,
+            "oldPrice": 5.00,
+            "discount": "15%",
+            "stockStatus": "In Stock",
+            "brand": "Berry Patch",
+            "categoryId": 1,
+            "tags": [
+                "Fruit",
+                "Sweet",
+                "Seasonal"
+            ],
+            "rating": 4.7,
+            "reviews": 230,
+            "description": "Luscious fresh strawberries, bursting with flavor. Perfect for desserts, breakfast, or snacking."
+        },
+        {
+            "id": 120,
+            "name": "Bell Peppers (Mixed)",
+            "image": "https://picsum.photos/seed/bellpeppers/400/400",
+            "price": 5.75,
+            "oldPrice": 6.50,
+            "discount": "11%",
+            "stockStatus": "In Stock",
+            "brand": "Rainbow Harvest",
+            "categoryId": 2,
+            "tags": [
+                "Vegetables",
+                "Colorful",
+                "Versatile"
+            ],
+            "rating": 4.6,
+            "reviews": 140,
+            "description": "A vibrant mix of red, yellow, and green bell peppers. Ideal for stir-fries, fajitas, or fresh salads."
+        },
+        {
+            "id": 121,
+            "name": "Shrimp (Raw, Peeled)",
+            "image": "https://picsum.photos/seed/shrimp/400/400",
+            "price": 15.99,
+            "oldPrice": 18.00,
+            "discount": "11%",
+            "stockStatus": "In Stock",
+            "brand": "Ocean's Bounty",
+            "categoryId": 3,
+            "tags": [
+                "Seafood",
+                "Quick Cook",
+                "Protein"
+            ],
+            "rating": 4.7,
+            "reviews": 170,
+            "description": "Convenient raw and peeled shrimp, ready for your favorite seafood recipes. Quick-cooking and delicious."
+        },
+        {
+            "id": 122,
+            "name": "Brown Rice (Organic)",
+            "image": "https://picsum.photos/seed/brownrice/400/400",
+            "price": 3.99,
+            "oldPrice": 4.50,
+            "discount": "11%",
+            "stockStatus": "In Stock",
+            "brand": "Earth Grains",
+            "categoryId": 4,
+            "tags": [
+                "Pantry",
+                "Whole Grain",
+                "Organic"
+            ],
+            "rating": 4.5,
+            "reviews": 100,
+            "description": "Nutritious organic brown rice, a wholesome staple for any meal. Provides sustained energy and fiber."
+        },
+        {
+            "id": 123,
+            "name": "Butter (Unsalted)",
+            "image": "https://picsum.photos/seed/unsaltedbutter/400/400",
+            "price": 4.29,
+            "oldPrice": 4.75,
+            "discount": "10%",
+            "stockStatus": "In Stock",
+            "brand": "Golden Creamery",
+            "categoryId": 5,
+            "tags": [
+                "Dairy",
+                "Baking",
+                "Cooking Staple"
+            ],
+            "rating": 4.8,
+            "reviews": 200,
+            "description": "High-quality unsalted butter, perfect for baking, cooking, or spreading. Made from fresh cream."
+        },
+        {
+            "id": 124,
+            "name": "Blueberries (Fresh)",
+            "image": "https://picsum.photos/seed/blueberries/400/400",
+            "price": 3.99,
+            "oldPrice": 4.50,
+            "discount": "11%",
+            "stockStatus": "In Stock",
+            "brand": "Nature's Berries",
+            "categoryId": 1,
+            "tags": [
+                "Fruit",
+                "Antioxidants",
+                "Sweet"
+            ],
+            "rating": 4.8,
+            "reviews": 290,
+            "description": "Plump and juicy fresh blueberries, a superfruit rich in antioxidants. Excellent in smoothies, yogurt, or on their own."
+        },
+        {
+            "id": 125,
+            "name": "Cucumbers",
+            "image": "https://picsum.photos/seed/cucumbers/400/400",
+            "price": 1.50,
+            "oldPrice": 1.80,
+            "discount": "17%",
+            "stockStatus": "In Stock",
+            "brand": "Cool Farms",
+            "categoryId": 2,
+            "tags": [
+                "Vegetables",
+                "Refreshing",
+                "Salad"
+            ],
+            "rating": 4.4,
+            "reviews": 85,
+            "description": "Crisp and refreshing cucumbers, perfect for salads, sandwiches, or infusing water. Hydrating and low in calories."
+        },
+        {
+            "id": 126,
+            "name": "Tuna Steaks (Frozen)",
+            "image": "https://picsum.photos/seed/tunasteaks/400/400",
+            "price": 18.75,
+            "oldPrice": 21.00,
+            "discount": "11%",
+            "stockStatus": "In Stock",
+            "brand": "Deep Sea Delights",
+            "categoryId": 3,
+            "tags": [
+                "Seafood",
+                "Protein",
+                "Quick Meal"
+            ],
+            "rating": 4.6,
+            "reviews": 115,
+            "description": "High-quality frozen tuna steaks, convenient for a quick and healthy meal. Rich in Omega-3 fatty acids."
+        },
+        {
+            "id": 127,
+            "name": "Oatmeal (Rolled Oats)",
+            "image": "https://picsum.photos/seed/oatmeal/400/400",
+            "price": 3.29,
+            "oldPrice": 3.75,
+            "discount": "12%",
+            "stockStatus": "In Stock",
+            "brand": "Hearty Grains",
+            "categoryId": 4,
+            "tags": [
+                "Breakfast",
+                "Whole Grain",
+                "Fiber"
+            ],
+            "rating": 4.7,
+            "reviews": 185,
+            "description": "Wholesome rolled oats, perfect for a warm and filling breakfast. A great source of dietary fiber and sustained energy."
+        },
+        {
+            "id": 128,
+            "name": "Large Eggs (Cage-Free)",
+            "image": "https://picsum.photos/seed/cagefreeeggs/400/400",
+            "price": 3.79,
+            "oldPrice": 4.25,
+            "discount": "11%",
+            "stockStatus": "In Stock",
+            "brand": "Happy Hen Farms",
+            "categoryId": 5,
+            "tags": [
+                "Dairy",
+                "Protein",
+                "Breakfast"
+            ],
+            "rating": 4.9,
+            "reviews": 350,
+            "description": "Fresh large cage-free eggs, a versatile and essential pantry item. High in protein and perfect for any meal."
+        },
+        {
+            "id": 129,
+            "name": "Oranges (Navel)",
+            "image": "https://picsum.photos/seed/naveloranges/400/400",
+            "price": 2.29,
+            "oldPrice": 2.75,
+            "discount": "17%",
+            "stockStatus": "In Stock",
+            "brand": "Citrus Grove",
+            "categoryId": 1,
+            "tags": [
+                "Fruit",
+                "Vitamin C",
+                "Juicy"
+            ],
+            "rating": 4.6,
+            "reviews": 175,
+            "description": "Sweet and juicy Navel oranges, bursting with Vitamin C. Perfect for fresh eating or juicing."
+        },
+        {
+            "id": 130,
+            "name": "Tomatoes (Roma)",
+            "image": "https://picsum.photos/seed/romatomaotes/400/400",
+            "price": 2.80,
+            "oldPrice": 3.20,
+            "discount": "12%",
+            "stockStatus": "In Stock",
+            "brand": "Sun-Kissed Produce",
+            "categoryId": 2,
+            "tags": [
+                "Vegetables",
+                "Sauce",
+                "Fresh"
+            ],
+            "rating": 4.5,
+            "reviews": 105,
+            "description": "Firm Roma tomatoes, ideal for making sauces, salsas, or adding to salads. Fresh and flavorful."
+        },
+        {
+            "id": 131,
+            "name": "Lamb Chops",
+            "image": "https://picsum.photos/seed/lambchops/400/400",
+            "price": 22.00,
+            "oldPrice": 25.00,
+            "discount": "12%",
+            "stockStatus": "In Stock",
+            "brand": "Meadowdale Meats",
+            "categoryId": 3,
+            "tags": [
+                "Meat",
+                "Specialty",
+                "Gourmet"
+            ],
+            "rating": 4.8,
+            "reviews": 70,
+            "description": "Tender and succulent lamb chops, perfect for a gourmet meal. Best grilled or pan-seared to perfection."
+        },
+        {
+            "id": 132,
+            "name": "Whole Wheat Pasta",
+            "image": "https://picsum.photos/seed/wholewheatpasta/400/400",
+            "price": 2.75,
+            "oldPrice": 3.25,
+            "discount": "15%",
+            "stockStatus": "In Stock",
+            "brand": "Pasta Grande",
+            "categoryId": 4,
+            "tags": [
+                "Pantry",
+                "Whole Grain",
+                "Italian"
+            ],
+            "rating": 4.4,
+            "reviews": 90,
+            "description": "Nutritious whole wheat pasta, a healthier alternative for your favorite Italian dishes. High in fiber."
+        },
+        {
+            "id": 133,
+            "name": "Heavy Whipping Cream",
+            "image": "https://picsum.photos/seed/heavycream/400/400",
+            "price": 3.50,
+            "oldPrice": 3.99,
+            "discount": "12%",
+            "stockStatus": "In Stock",
+            "brand": "Dairy Rich",
+            "categoryId": 5,
+            "tags": [
+                "Dairy",
+                "Baking",
+                "Desserts"
+            ],
+            "rating": 4.7,
+            "reviews": 160,
+            "description": "Rich heavy whipping cream, essential for desserts, sauces, and soups. Whips up beautifully for a perfect topping."
+        },
+        {
+            "id": 134,
+            "name": "Pears (Bartlett)",
+            "image": "https://picsum.photos/seed/bartlettpears/400/400",
+            "price": 2.49,
+            "oldPrice": 2.99,
+            "discount": "17%",
+            "stockStatus": "In Stock",
+            "brand": "Sweet Orchard",
+            "categoryId": 1,
+            "tags": [
+                "Fruit",
+                "Sweet",
+                "Seasonal"
+            ],
+            "rating": 4.5,
+            "reviews": 80,
+            "description": "Sweet and juicy Bartlett pears, perfect for snacking or desserts. Enjoy them fresh or poached."
+        },
+        {
+            "id": 135,
+            "name": "Potatoes (Russet)",
+            "image": "https://picsum.photos/seed/russetpotatoes/400/400",
+            "price": 4.00,
+            "oldPrice": 4.50,
+            "discount": "11%",
+            "stockStatus": "In Stock",
+            "brand": "Earth's Bounty",
+            "categoryId": 2,
+            "tags": [
+                "Vegetables",
+                "Staple",
+                "Versatile"
+            ],
+            "rating": 4.6,
+            "reviews": 195,
+            "description": "Versatile Russet potatoes, ideal for baking, mashing, or frying. A classic comfort food."
+        },
+        {
+            "id": 136,
+            "name": "Cod Fillets (Frozen)",
+            "image": "https://picsum.photos/seed/codfillets/400/400",
+            "price": 14.50,
+            "oldPrice": 16.00,
+            "discount": "9%",
+            "stockStatus": "In Stock",
+            "brand": "North Atlantic",
+            "categoryId": 3,
+            "tags": [
+                "Seafood",
+                "White Fish",
+                "Mild Flavor"
+            ],
+            "rating": 4.5,
+            "reviews": 95,
+            "description": "Flaky and mild frozen cod fillets, perfect for a light and healthy meal. Great baked, broiled, or pan-fried."
+        },
+        {
+            "id": 137,
+            "name": "Quinoa (Organic)",
+            "image": "https://picsum.photos/seed/organicquinoa/400/400",
+            "price": 5.79,
+            "oldPrice": 6.50,
+            "discount": "11%",
+            "stockStatus": "In Stock",
+            "brand": "Ancient Grains",
+            "categoryId": 4,
+            "tags": [
+                "Pantry",
+                "Superfood",
+                "Gluten-Free"
+            ],
+            "rating": 4.8,
+            "reviews": 130,
+            "description": "Protein-rich organic quinoa, a versatile gluten-free grain. Perfect for salads, side dishes, or a healthy breakfast."
+        },
+        {
+            "id": 138,
+            "name": "Sour Cream",
+            "image": "https://picsum.photos/seed/sourcream/400/400",
+            "price": 2.75,
+            "oldPrice": 3.10,
+            "discount": "11%",
+            "stockStatus": "In Stock",
+            "brand": "Dairy Dreams",
+            "categoryId": 5,
+            "tags": [
+                "Dairy",
+                "Condiment",
+                "Versatile"
+            ],
+            "rating": 4.6,
+            "reviews": 110,
+            "description": "Creamy sour cream, ideal for topping baked potatoes, tacos, or as an ingredient in dips and sauces."
+        },
+        {
+            "id": 139,
+            "name": "Lemons",
+            "image": "https://picsum.photos/seed/lemons/400/400",
+            "price": 0.79,
+            "oldPrice": 0.99,
+            "discount": "20%",
+            "stockStatus": "In Stock",
+            "brand": "Citrus Burst",
+            "categoryId": 1,
+            "tags": [
+                "Fruit",
+                "Tangy",
+                "Flavor Enhancer"
+            ],
+            "rating": 4.7,
+            "reviews": 210,
+            "description": "Zesty fresh lemons, perfect for adding a bright flavor to drinks, dishes, and desserts. Rich in Vitamin C."
+        },
+        {
+            "id": 140,
+            "name": "Onions (Yellow)",
+            "image": "https://picsum.photos/seed/yellowonions/400/400",
+            "price": 1.20,
+            "oldPrice": 1.50,
+            "discount": "20%",
+            "stockStatus": "In Stock",
+            "brand": "Kitchen Staples",
+            "categoryId": 2,
+            "tags": [
+                "Vegetables",
+                "Staple",
+                "Flavor Base"
+            ],
+            "rating": 4.5,
+            "reviews": 180,
+            "description": "Essential yellow onions, a foundational ingredient for countless recipes. Adds depth of flavor to any dish."
+        },
+        {
+            "id": 141,
+            "name": "Turkey Breast (Sliced)",
+            "image": "https://picsum.photos/seed/slicedturkey/400/400",
+            "price": 8.50,
+            "oldPrice": 9.75,
+            "discount": "13%",
+            "stockStatus": "In Stock",
+            "brand": "Deluxe Deli",
+            "categoryId": 3,
+            "tags": [
+                "Deli Meat",
+                "Poultry",
+                "Lean Protein"
+            ],
+            "rating": 4.6,
+            "reviews": 100,
+            "description": "Premium sliced turkey breast, perfect for sandwiches, wraps, or salads. A lean and healthy protein option."
+        },
+        {
+            "id": 142,
+            "name": "Lentils (Green)",
+            "image": "https://picsum.photos/seed/greenlentils/400/400",
+            "price": 2.50,
+            "oldPrice": 2.99,
+            "discount": "16%",
+            "stockStatus": "In Stock",
+            "brand": "Pulse Pantry",
+            "categoryId": 4,
+            "tags": [
+                "Pantry",
+                "Legumes",
+                "Protein",
+                "Fiber"
+            ],
+            "rating": 4.4,
+            "reviews": 60,
+            "description": "Nutritious green lentils, great for soups, stews, or salads. A fantastic source of plant-based protein and fiber."
+        },
+        {
+            "id": 143,
+            "name": "Cream Cheese",
+            "image": "https://picsum.photos/seed/creamcheese/400/400",
+            "price": 3.00,
+            "oldPrice": 3.40,
+            "discount": "12%",
+            "stockStatus": "In Stock",
+            "brand": "Rich & Creamy",
+            "categoryId": 5,
+            "tags": [
+                "Dairy",
+                "Spreads",
+                "Baking"
+            ],
+            "rating": 4.7,
+            "reviews": 150,
+            "description": "Smooth and creamy cream cheese, perfect for bagels, cheesecakes, or savory dips. A versatile dairy favorite."
+        }
+    ]
+}

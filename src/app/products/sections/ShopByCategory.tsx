@@ -1,0 +1,35 @@
+/* eslint-disable @next/next/no-img-element */
+
+
+import React from 'react';
+import type { Category } from '../components/categories';
+import SectionHeader from '../components/SectionHeader';
+
+
+const res = await fetch('http://localhost:3000/api/categories')
+const { categories } = await res.json();
+
+const ShopByCategory = () => {
+    return (
+        <div className='py-14 container-center space-y-6'>
+            <SectionHeader smallText='Categories' title='Shop by categories' />
+            <div className='grid grid-cols-6 gap-6'>
+                {
+                    categories?.map((category: Category, index: number) => {
+                        const { id, image, link, name, productCount } = category;
+                        return (
+                            <div key={id} className='py-9 px-3 hover:shadow hover:shadow-green-500 cursor-pointer rounded-lg flex flex-col gap-4 border border-gray-200 hover:border-green-500 duration-150 '>
+                                <img src={image} className="m-auto block" alt=''/>
+                                <p className='text-center text-lg'>
+                                    {name}
+                                </p>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+        </div>
+    );
+};
+
+export default ShopByCategory;

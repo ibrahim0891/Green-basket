@@ -1,0 +1,100 @@
+{
+    "categories": [
+        {
+            "id": "1",
+            "name": "Fruits",
+            "description": "Fresh, perishable fruits and vegetables.",
+            "productCount": 165,
+            "image": "/category-images/image 1-1.png",
+            "link": "/fruits"
+        },
+        {
+            "id": "2",
+            "name": "Fish",
+            "description": "Fresh seafood including fish and shrimp.",
+            "productCount": 137,
+            "image": "/category-images/image 1-5.png",
+            "link": "/fish"
+        },
+        {
+            "id": "3",
+            "name": "Vegetables",
+            "description": "Fresh, organic, healthy vegetables.",
+            "productCount": 34,
+            "image": "/category-images/image 1-3.png",
+            "link": "/vegetables"
+        },
+        {
+            "id": "4",
+            "name": "Meat",
+            "description": "Premium cuts of beef, chicken, and pork.",
+            "productCount": 165,
+            "image": "/category-images/image 1-4.png",
+            "link": "/meat"
+        },
+        {
+            "id": "5",
+            "name": "Drinks",
+            "description": "Hydrating beverages like water and juices.",
+            "productCount": 48,
+            "image": "/category-images/image 1.png",
+            "link": "/drinks"
+        },
+        {
+            "id": "6",
+            "name": "Snacks",
+            "description": "Crunchy and tasty chips, nuts, and more.",
+            "productCount": 165,
+            "image": "/category-images/image 1-2.png",
+            "link": "/snacks"
+        },
+        {
+            "id": "7",
+            "name": "Breakfast & Dairy",
+            "description": "Milk, cheese, yogurt, eggs, and breakfast cereals.",
+            "productCount": 85,
+            "image": "/category-images/image 1-6.png",
+            "link": "/dairy"
+        },
+        {
+            "id": "8",
+            "name": "Baking & Grains",
+            "description": "Flour, sugar, pasta, rice, and baking essentials.",
+            "productCount": 110,
+            "image": "/category-images/image 1-7.png",
+            "link": "/baking-grains"
+        },
+        {
+            "id": "9",
+            "name": "Condiments & Sauces",
+            "description": "Ketchup, mustard, salad dressings, and cooking sauces.",
+            "productCount": 72,
+            "image": "/category-images/image 1-8.png",
+            "link": "/sauces"
+        },
+        {
+            "id": "10",
+            "name": "Household & Cleaning",
+            "description": "Detergents, paper goods, and cleaning supplies.",
+            "productCount": 55,
+            "image": "/category-images/image 1-9.png",
+            "link": "/household"
+        },
+        {
+            "id": "11",
+            "name": "Personal Care",
+            "description": "Shampoo, soap, dental care, and cosmetics.",
+            "productCount": 94,
+            "image": "/category-images/image 1-10.png",
+            "link": "/personal-care"
+        },
+        {
+            "id": "12",
+            "name": "Canned Goods",
+            "description": "Beans, soups, and other shelf-stable packaged foods.",
+            "productCount": 61,
+            "image": "/category-images/image 1-11.png",
+            "link": "/canned-goods"
+        }
+    ]
+}
