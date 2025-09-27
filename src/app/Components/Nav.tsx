@@ -2,6 +2,8 @@
 
 import { CaretDownIcon, HeartIcon, ListIcon, MagnifyingGlassIcon, PhoneCallIcon, PlantIcon, ShoppingBagIcon } from '@phosphor-icons/react';
 import Logo from './Logo';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 type NavItem = {
     name: string, link: string, downArray: boolean
@@ -12,11 +14,14 @@ const navData: NavItem[] = [
     { name: "Shop", link: "/product", downArray: true },
     { name: "Pages", link: "/pages", downArray: true },
     { name: "Blogs", link: "/blogs", downArray: true },
+    { name: "Login", link: "/auth/login", downArray: false },
     { name: "About Us", link: "/about", downArray: false },
 ];
 
 
 const Nav = () => {
+    const pathname = usePathname()
+
     return (
         <div className='bg-white shadow'>
             <div className='container-center py-6 space-y-3 '>
@@ -50,12 +55,13 @@ const Nav = () => {
                         </span>
                         <div className='flex  gap-7 '>
                             {navData.map((item, index) => {
+                                const isActive = pathname == item.link 
                                 return (
                                     <div
-                                        className='space-x-2 text-gray-600 flex items-center gap-2'
+                                        className={`${isActive && 'text-green-600 font-semibold'} space-x-2 text-gray-600 flex items-center gap-2`}
                                         key={index}
                                     >
-                                        <a href={item.link}> {item.name}</a>
+                                        <Link href={item.link}> {item.name}</Link>
                                         {item.downArray ? (
                                             <CaretDownIcon size={16} />
                                         ) : null}
