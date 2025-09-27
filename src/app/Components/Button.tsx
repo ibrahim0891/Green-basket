@@ -3,12 +3,13 @@ import React from 'react';
 
 
 type ButtonProp = {
-    label : string , 
+    label: string,
+    className?: string
 }
 
-const Button = ({label}: ButtonProp) => {
+const Button = ({ label, className }: ButtonProp) => {
     return (
-        <button className='bg-green-500 text-white active:scale-90 transition-all px-6 py-4 rounded-full'>
+        <button className={`${className} bg-green-500 text-white active:scale-90 transition-all px-6 py-4 rounded-full`}>
             {label}
         </button>
     );
