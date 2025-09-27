@@ -18,5 +18,5 @@ body {
 }
 
 .container-center{
-    @apply container m-auto
+    @apply container mx-auto
 }

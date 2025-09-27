@@ -8,7 +8,7 @@ import { ShoppingBagIcon, StarIcon } from "@phosphor-icons/react";
 export type Product = {
     id: number,
     name: string,
-    image: string[],
+    images: string[],
     price: number,
     oldPrice: number,
     discount: number,
@@ -33,7 +33,7 @@ const ProductCard = ({ product }: { product: Product }) => {
         >
             <div className="aspect-[1/1]">
                 <img
-                    src={'image'}
+                    src={images[0]}
                     alt=""
                     className="w-full h-full object-center object-cover"
                 />
@@ -42,15 +42,15 @@ const ProductCard = ({ product }: { product: Product }) => {
                 <div>
                     <p className="text-sm text-gray-600"> {name}</p>
                     <p className="text-md">
-                        {discounted_price}
-                        <span className="line-through text-gray-400">{original_price}</span>
+                        123
+                        <span className="line-through text-gray-400"> 234 </span>
                     </p>
                     <div className="flex mt-1.5">
                         {new Array(5).fill("").map((value, index) => {
                             return (
                                 <StarIcon
                                     color="#facc15"
-                                    className={`${index < rating ? "bg-amber-300" : ""}`}
+                                    className={`${index < ratings ? "bg-amber-300" : ""}`}
                                     size={14}
                                     key={index}
                                 />
