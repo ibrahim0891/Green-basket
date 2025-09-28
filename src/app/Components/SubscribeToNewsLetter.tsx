@@ -9,16 +9,16 @@ const SubscribeToNewsLetter = () => {
         <div>
             <div className="bg-[#f7f7f7]">
                 <div className="container-center py-10 flex items-center justify-between">
-                    <div className="space-y-3">
+                    <div className="space-y-3 max-w-[450px]">
                         <h2 className="text-3xl font-semibold"> Subcribe our Newsletter</h2>
                         <p className="text-gray-500"> Pellentesque eu nibh eget mauris congue mattis mattis nec tellus. Phasellus imperdiet elit eu magna. </p>
                     </div>
 
-                    <div className="flex items-center gap-8">
+                    <div className="flex items-center gap-8 w-full justify-end pl-12 ">
 
-                        <div >
-                            <div className="flex bg-white items-center justify-between border pl-5 rounded-full border-gray-200">
-                                <input type="text" placeholder="Enter Your e-mail address." />
+                        <div className="w-full lg:max-w-[450px]">
+                            <div className="flex w-full bg-white items-center justify-between border pl-5 rounded-full border-gray-200">
+                                <input type="text" placeholder="Enter Your e-mail address." className="w-full focus:outline-none" />
                                 <Button label="Subscribe" className="px-10" />
                             </div>
                         </div>

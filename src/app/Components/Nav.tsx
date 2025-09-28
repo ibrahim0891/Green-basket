@@ -24,14 +24,14 @@ const Nav = () => {
 
     return (
         <div className='bg-white shadow'>
-            <div className='container-center py-6 space-y-3 '>
-                <div className='flex items-center justify-between '>
+            <div className='container-center p-3  '>
+                <div className='flex items-center justify-between  mb-2'>
 
                     {/* logo */}
-                    <Logo/>
+                    <Logo />
                     {/* search bar  */}
                     <div className=''>
-                        <div className='flex items-center border border-gray-200 '>
+                        <div className='flex items-center border border-gray-200 rounded-lg overflow-hidden'>
                             <MagnifyingGlassIcon className='mx-3' />
                             <input type="search" placeholder='search' className='focus:outline-none py-2' />
                             <button className='bg-green-500 text-white px-6 py-2'> Search </button>
@@ -39,23 +39,25 @@ const Nav = () => {
                     </div>
 
                     {/* cart option and wishlist  */}
-                    <div className='flex items-center justify-between gap-4 text-3xl'>
-                        <HeartIcon /> <span className='text-gray-300'> | </span> <ShoppingBagIcon />
-                        <div className=''>
-                            <p className='text-sm text-gray-600'> Shopping Cart </p>
-                            <p className='text-base'> $57.00 </p>
+                    <Link href={'/shopping-cart'}>
+                        <div className='flex items-center justify-between gap-4 text-3xl'>
+                            <HeartIcon /> <span className='text-gray-300'> | </span> <ShoppingBagIcon />
+                            <div className=''>
+                                <p className='text-sm text-gray-600'> Shopping Cart </p>
+                                <p className='text-base'> $57.00 </p>
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
 
                 <div className='flex items-center justify-between'>
                     <div className='flex items-center'>
-                        <span className='p-5 mr-4 hover:bg-gray-800 hover:text-white duration-200 rounded-lg '>
-                        <ListIcon size={30}/>
+                        <span className='p-3 mr-4 hover:bg-gray-800 hover:text-white duration-200 rounded-lg '>
+                            <ListIcon size={30} />
                         </span>
                         <div className='flex  gap-7 '>
                             {navData.map((item, index) => {
-                                const isActive = pathname == item.link 
+                                const isActive = pathname == item.link
                                 return (
                                     <div
                                         className={`${isActive && 'text-green-600 font-semibold'} space-x-2 text-gray-600 flex items-center gap-2`}

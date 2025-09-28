@@ -4,6 +4,7 @@ import "./globals.css";
 import Nav from "@/app/Components/Nav";
 import Footer from "./Components/Footer";
 import SubscribeToNewsLetter from "./Components/SubscribeToNewsLetter";
+import { Suspense } from "react";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -38,7 +39,10 @@ export default function RootLayout({
                 className={`${poppins.variable} antialiased`}
             >
                 <Nav />
+            <Suspense fallback='Loading...'>
                 {children}
+            </Suspense>
+                
 
                <SubscribeToNewsLetter/>
 

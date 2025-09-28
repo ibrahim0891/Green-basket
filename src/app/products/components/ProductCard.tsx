@@ -5,7 +5,7 @@
 //compatible with nextjs
 import { ShoppingBagIcon, StarIcon } from "@phosphor-icons/react";
 
-export type Product = {
+type Product = {
     id: number,
     name: string,
     images: string[],
@@ -24,8 +24,8 @@ const ProductCard = ({ product }: { product: Product }) => {
         name,
         ratings,
         images,
-
     } = product;
+    
     return (
         <div
             onClick={() => null}

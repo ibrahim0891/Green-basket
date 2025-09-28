@@ -22,10 +22,10 @@ const Categories = ({ Icon }: { Icon: Icon }) => {
     return (
         <div className="flex flex-col border border-gray-200">
             {data?.categories.slice(0, 8).map((category: Category, index: number) => {
-                const { name } = category;
+                const { name , id   } = category;
                 return <div key={index} className="flex  items-center gap-4 hover:bg-green-500 text-nowrap hover:text-white py-5 px-8">
                     <Icon size={20} />
-                    <Link className="w-full " key={index} href={'#'}> {name} </Link>
+                    <Link className="w-full " key={index} href={{ pathname: `/category/${name}`  , query: {id : id }}}> {name} </Link>
                 </div>
 
             })}
