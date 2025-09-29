@@ -29,13 +29,13 @@ const Category = ({ params }: { params: { name: string } }) => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-[1fr_3fr] gap-8  h-screen mt-5">
+            <div className="grid grid-cols-[1fr_3fr] gap-8  h-1/2 mt-5">
                 <div>
                 
                      <div className="flex items-center justify-between pb-4">
                         <h1 className="text-2xl font-semibold"> All Categories </h1>
                         <span>
-                   h-scre          <CaretDownIcon size={20}/>
+                            <CaretDownIcon size={20}/>
                         </span>
                      </div>
 
@@ -59,8 +59,10 @@ const Category = ({ params }: { params: { name: string } }) => {
                         </span>
                      </div>
                 </div>
-                <div>
-                    prodcut display section
+                <div className="flex items-center justify-center text-4xl">
+                     <h1> 
+                        This is {categoryName}'s page. Page id is: {id}
+                     </h1>
                 </div>
             </div>
         </div>
