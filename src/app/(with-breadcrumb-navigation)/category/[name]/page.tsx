@@ -1,13 +1,40 @@
 'use client'
 
 import Button from "@/app/Components/Button";
-import { CaretDownIcon, SlidersHorizontalIcon } from "@phosphor-icons/react";
-import { useSearchParams } from "next/navigation";
+import { Slider } from "@/components/ui/slider";
+import { CaretDownIcon, SlidersHorizontalIcon, StarIcon } from "@phosphor-icons/react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import ProductResultWrapper from "../ProductResult";
+import ProductResultSection from "../server/ResultSection";
+import CategoryRadioButtonList from "../categoryRadioButtonList";
+
+let FieldTitle = ({ name }: { name: string }) => {
+    return <div className="flex items-center justify-between pb-4 mt-2">
+        <h1 className="text-2xl font-semibold"> {name} </h1>
+        <span>
+            <CaretDownIcon size={20} />
+        </span>
+    </div>
+
+}
 
 const Category = ({ params }: { params: { name: string } }) => {
-    let categoryName = decodeURIComponent(params.name)
     let searchParams = useSearchParams()
+    let router = useRouter()
+    let pathname = usePathname()
     let id = searchParams.get('id')
+
+
+    let [selected, setSelected] = useState(id)
+
+    const handleCategoryChange = (newId: string) => {
+        setSelected(newId);
+        const newSearchParams = new URLSearchParams(searchParams.toString());
+        newSearchParams.set('id', newId);
+        router.replace(`${pathname}?${newSearchParams.toString()}`);
+    }
+
 
     return <div className="min-h-screen">
         <div className="container-center py-10 ">
@@ -29,40 +56,64 @@ const Category = ({ params }: { params: { name: string } }) => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-[1fr_3fr] gap-8  h-1/2 mt-5">
+            <div className="grid grid-cols-[1fr_3fr] gap-8 mt-5">
+                <aside>
+                    <div>
+                        <FieldTitle name="All Categories" />
+
+                        <div className="flex flex-col gap-6">
+                            <CategoryRadioButtonList selected={selected} setSelected={handleCategoryChange} />
+                        </div>
+
+
+                    </div>
+
+                    <div className="my-10">
+                        <FieldTitle name="Price " />
+                        <Slider min={0} max={100} step={2} defaultValue={[12, 32]} className="my-10">
+
+                        </Slider>
+
+                    </div>
+
+                    <div>
+                        <FieldTitle name="Rattings " />
+                        <div className="space-y-3">
+                            <div className="flex items-center gap-3 text-amber-300">
+                                {new Array(5).fill('').map((val, index) => {
+                                    return <StarIcon weight="fill" size={18} key={index} />
+                                })}
+                            </div>
+                            <div className="flex items-center gap-3 text-amber-300">
+                                {new Array(3).fill('').map((val, index) => {
+                                    return <StarIcon weight="fill" size={18} key={index} />
+                                })}
+                            </div>
+                            <div className="flex items-center gap-3 text-amber-300">
+                                {new Array(2).fill('').map((val, index) => {
+                                    return <StarIcon weight="fill" size={18} key={index} />
+                                })}
+                            </div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <FieldTitle name="Popular tags" />
+                        <div className="">
+                            <span className="bg-green-500 text-green-50 px-3 py-1 rounded-full m-2 inline-block"> Meat </span>
+                            <span className="bg-green-500 text-green-50 px-3 py-1 rounded-full m-2 inline-block"> vegetabel </span>
+                            <span className="bg-green-500 text-green-50 px-3 py-1 rounded-full m-2 inline-block"> Soft drinks </span>
+                            <span className="bg-green-500 text-green-50 px-3 py-1 rounded-full m-2 inline-block"> Cleaning items </span>
+                            <span className="bg-green-500 text-green-50 px-3 py-1 rounded-full m-2 inline-block"> Food </span>
+                            <span className="bg-green-500 text-green-50 px-3 py-1 rounded-full m-2 inline-block"> Grocery </span>
+                        </div>
+                    </div>
+                </aside>
+
                 <div>
-                
-                     <div className="flex items-center justify-between pb-4">
-                        <h1 className="text-2xl font-semibold"> All Categories </h1>
-                        <span>
-                            <CaretDownIcon size={20}/>
-                        </span>
-                     </div>
-
-                     <div className="flex items-center justify-between pb-4">
-                        <h1 className="text-2xl font-semibold"> Price </h1>
-                        <span>
-                            <CaretDownIcon size={20}/>
-                        </span>
-                     </div>
-
-                     <div className="flex items-center justify-between pb-4">
-                        <h1 className="text-2xl font-semibold"> Rating </h1>
-                        <span>
-                            <CaretDownIcon size={20}/>
-                        </span>
-                     </div>
-                     <div className="flex items-center justify-between pb-4">
-                        <h1 className="text-2xl font-semibold"> Popular tag </h1>
-                        <span>
-                            <CaretDownIcon size={20}/>
-                        </span>
-                     </div>
-                </div>
-                <div className="flex items-center justify-center text-4xl">
-                     <h1> 
-                        This is {categoryName}'s page. Page id is: {id}
-                     </h1>
+                    <ProductResultWrapper>
+                        <ProductResultSection categoryId={selected} />
+                    </ProductResultWrapper>
                 </div>
             </div>
         </div>

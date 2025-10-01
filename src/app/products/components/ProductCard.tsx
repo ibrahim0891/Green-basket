@@ -1,14 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
+'use client'
 
-
-// this is a fauty cmompnent brought form earlier react version , it needs some fixes to be 
-//compatible with nextjs
 import { ShoppingBagIcon, StarIcon } from "@phosphor-icons/react";
+import Link from "next/link";
 
-type Product = {
+export type Product = {
     id: number,
     name: string,
     images: string[],
+    image: string,
     price: number,
     oldPrice: number,
     discount: number,
@@ -16,16 +16,24 @@ type Product = {
     brand: string,
     categoryId: number,
     tags: string[]
-    ratings: number,
+    rating: number,
+    description : string
+    
 }
 
 const ProductCard = ({ product }: { product: Product }) => {
     const {
+        id,
         name,
-        ratings,
+        rating,
         images,
+        image,
+        price,
+        oldPrice,
+        discount, 
+        categoryId,
     } = product;
-    
+
     return (
         <div
             onClick={() => null}
@@ -33,30 +41,33 @@ const ProductCard = ({ product }: { product: Product }) => {
         >
             <div className="aspect-[1/1]">
                 <img
-                    src={images[0]}
+                    src={image}
                     alt=""
                     className="w-full h-full object-center object-cover"
                 />
             </div>
             <div className="flex items-center justify-between p-6">
                 <div>
-                    <p className="text-sm text-gray-600"> {name}</p>
-                    <p className="text-md">
-                        123
-                        <span className="line-through text-gray-400"> 234 </span>
-                    </p>
-                    <div className="flex mt-1.5">
-                        {new Array(5).fill("").map((value, index) => {
-                            return (
-                                <StarIcon
-                                    color="#facc15"
-                                    className={`${index < ratings ? "bg-amber-300" : ""}`}
-                                    size={14}
-                                    key={index}
-                                />
-                            );
-                        })}
-                    </div>
+                    <Link href={{pathname : `/product/${id}`  , query: {categoryId}}} >
+                        <p className="text-sm text-gray-600"> {name}</p>
+                        <p className="text-md">
+                            {price}
+                            <span className="line-through text-gray-400"> {oldPrice} </span>
+                        </p>
+                        <div className="flex mt-1.5">
+                            {new Array(5).fill("").map((value, index) => {
+                                return (
+                                    <StarIcon
+                                        color="#facc15"
+                                        className={`${index < rating ? "text-amber-300" : ""}`}
+                                        size={14}
+                                        weight={`${index < rating ? "fill" : "regular"}`}
+                                        key={index}
+                                    />
+                                );
+                            })}
+                        </div>
+                    </Link>
                 </div>
                 <div>
                     <div className="bg-gray-100 p-4 rounded-full">

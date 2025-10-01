@@ -5,12 +5,13 @@ import React from 'react';
 import type { Category } from '../components/categories';
 import SectionHeader from '../components/SectionHeader';
 import Link from 'next/link';
+import axiosInstance from '@/app/lib/axios';
 
 
-const res = await fetch('http://localhost:3000/api/categories')
-const { categories } = await res.json();
 
-const ShopByCategory = () => {
+const ShopByCategory = async () => {
+    const res = await axiosInstance.get('/api/categories')
+    const { categories } = res.data
     return (
         <div className='py-14 container-center space-y-6'>
             <SectionHeader smallText='Categories' title='Shop by categories' />
