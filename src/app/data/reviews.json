@@ -41,6 +41,22 @@
             "date": "2025-09-20T08:00:00Z"
         },
         {
+            "id": 5,
+            "productId": 102,
+            "user": "Kristin Watson",
+            "rating": 2,
+            "comment": "I got some mango rotten. Didn't exptect this from this store! 😠",
+            "date": "2025-09-20T08:00:00Z"
+        },
+        {
+            "id": 5,
+            "productId": 102,
+            "user": "Michael Brown",
+            "rating": 2,
+            "comment": "I got some mango spoiiled. Didn't exptect this from this store! 😠",
+            "date": "2025-09-20T08:00:00Z"
+        },
+        {
             "id": 6,
             "productId": 103,
             "user": "Michael Brown",

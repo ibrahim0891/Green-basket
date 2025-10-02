@@ -4,7 +4,7 @@ import Button from "@/app/Components/Button";
 import { Slider } from "@/components/ui/slider";
 import { CaretDownIcon, SlidersHorizontalIcon, StarIcon } from "@phosphor-icons/react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import {   useState } from "react";
 import ProductResultWrapper from "../ProductResult";
 import ProductResultSection from "../server/ResultSection";
 import CategoryRadioButtonList from "../categoryRadioButtonList";

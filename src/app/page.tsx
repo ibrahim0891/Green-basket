@@ -1,11 +1,11 @@
-import Home from "./products/page";
-import DiscountAds from "./products/sections/DiscountAds";
-import FeaturedProduct from "./products/sections/FeaturedProduct";
-import OurFeatures from "./products/sections/OurFeatures";
-import ShopByCategory from "./products/sections/ShopByCategory";
-import Sponsor from "./products/sections/Sponsor";
+import Home from "./(Main-pages)/products/page";
+import DiscountAds from "./(Main-pages)/products/sections/DiscountAds";
+import FeaturedProduct from "./(Main-pages)/products/sections/FeaturedProduct";
+import OurFeatures from "./(Main-pages)/products/sections/OurFeatures";
+import ShopByCategory from "./(Main-pages)/products/sections/ShopByCategory";
+import Sponsor from "./(Main-pages)/products/sections/Sponsor";
 
- 
+
 
 export default function App() {
     return <div>
@@ -13,7 +13,7 @@ export default function App() {
         <OurFeatures />
         <DiscountAds />
         <ShopByCategory />
-        <FeaturedProduct/>
+        <FeaturedProduct />
         <Sponsor />
     </div>
 }   

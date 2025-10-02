@@ -1,5 +1,5 @@
 import axiosInstance from "@/app/lib/axios"
-import ProductCard, { Product } from "@/app/products/components/ProductCard";
+import ProductCard, { Product } from "@/app/(Main-pages)/products/components/ProductCard";
 
 
 
