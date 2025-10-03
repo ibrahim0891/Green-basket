@@ -10,7 +10,7 @@ const ProductResultSection = ({ categoryId }) => {
     let products: Product[] = productList?.products
 
     let selectedProduct = products.filter(item => item.categoryId == categoryId)
-    console.log(selectedProduct);
+    console.log(categoryId);
     return <div className='v space-y-6'>
 
         {

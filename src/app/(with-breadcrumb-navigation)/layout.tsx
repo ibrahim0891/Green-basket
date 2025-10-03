@@ -4,6 +4,7 @@ import { CaretRightIcon } from "@phosphor-icons/react";
 import { HouseIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { Suspense } from "react";
 
 const Layout = ({ children }: { children: React.JSX.Element }) => {
     let pathname = decodeURIComponent(usePathname());
@@ -36,7 +37,9 @@ const Layout = ({ children }: { children: React.JSX.Element }) => {
                     </div>
                 </div>
             </div>
-            {children}
+            <Suspense fallback={<div className="w-full h-full aspect-square flex items-center justify-center"> Loading...</div>}>
+                {children}
+            </Suspense>
         </div>
     );
 };

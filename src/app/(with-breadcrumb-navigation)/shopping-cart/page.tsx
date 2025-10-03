@@ -2,11 +2,10 @@ import React from 'react';
 import SectionHeader from '../../(Main-pages)/products/components/SectionHeader';
 import axiosInstance from '@/app/lib/axios';
 
-let res = await axiosInstance.get('/api/products')
-let productList = res.data
-
-const ShoppingCart = () => {
-
+const ShoppingCart = async () => {
+    let res = await axiosInstance.get('/api/products')
+    let productList = res.data
+     
     return (
         <div>
             <div className='container-center py-10'>

@@ -9,7 +9,7 @@
             "link": "/fruits"
         },
         {
-            "id": "2",
+            "id": "3",
             "name": "Fish",
             "description": "Fresh seafood including fish and shrimp.",
             "productCount": 137,
@@ -17,7 +17,7 @@
             "link": "/fish"
         },
         {
-            "id": "3",
+            "id": "2",
             "name": "Vegetables",
             "description": "Fresh, organic, healthy vegetables.",
             "productCount": 34,

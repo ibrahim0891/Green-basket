@@ -2,7 +2,7 @@
     "blogs": [
         {
             "id": 1,
-            "image": "A person's hands typing on a laptop with lines of code visible on the screen.",
+            "image": "https://picsum.photos/800/600?random=8",
             "date": {
                 "day": "25",
                 "month": "SEP"

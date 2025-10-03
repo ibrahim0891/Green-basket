@@ -41,28 +41,300 @@
             "date": "2025-09-20T08:00:00Z"
         },
         {
-            "id": 5,
+            "id": 6,
             "productId": 102,
             "user": "Kristin Watson",
             "rating": 2,
-            "comment": "I got some mango rotten. Didn't exptect this from this store! 😠",
-            "date": "2025-09-20T08:00:00Z"
+            "comment": "I got some mango rotten. Didn't expect this from this store! 😠",
+            "date": "2025-09-22T11:30:00Z"
         },
         {
-            "id": 5,
+            "id": 7,
             "productId": 102,
             "user": "Michael Brown",
             "rating": 2,
-            "comment": "I got some mango spoiiled. Didn't exptect this from this store! 😠",
-            "date": "2025-09-20T08:00:00Z"
+            "comment": "I got some mango spoiled. Disappointed with the quality control.",
+            "date": "2025-09-23T14:00:00Z"
         },
         {
-            "id": 6,
+            "id": 8,
             "productId": 103,
             "user": "Michael Brown",
             "rating": 4,
-            "comment": "Great taste, but a little pricey.",
+            "comment": "Great taste, but a little pricey for the size.",
             "date": "2025-09-21T10:30:00Z"
+        },
+        {
+            "id": 9,
+            "productId": 104,
+            "user": "Sophia Lee",
+            "rating": 5,
+            "comment": "Very fresh and crisp. Perfect for roasting!",
+            "date": "2025-09-28T14:00:00Z"
+        },
+        {
+            "id": 10,
+            "productId": 104,
+            "user": "Ben Green",
+            "rating": 4,
+            "comment": "Good quality cauliflower, but a bit smaller than expected.",
+            "date": "2025-09-29T11:20:00Z"
+        },
+        {
+            "id": 11,
+            "productId": 109,
+            "user": "Chloe Harris",
+            "rating": 5,
+            "comment": "Wonderfully tart and crunchy. My kids love them.",
+            "date": "2025-10-01T16:45:00Z"
+        },
+        {
+            "id": 12,
+            "productId": 109,
+            "user": "David Chen",
+            "rating": 5,
+            "comment": "These are perfect for baking pies. They hold their shape and have a great flavor.",
+            "date": "2025-09-30T10:15:00Z"
+        },
+        {
+            "id": 13,
+            "productId": 110,
+            "user": "Maria Garcia",
+            "rating": 3,
+            "comment": "It was fresh but wilted very quickly, had to use it the same day.",
+            "date": "2025-09-29T18:00:00Z"
+        },
+        {
+            "id": 14,
+            "productId": 120,
+            "user": "Alex Johnson",
+            "rating": 5,
+            "comment": "Sweet, crunchy, and vibrant. Great for stir-fries.",
+            "date": "2025-10-02T09:05:00Z"
+        },
+        {
+            "id": 15,
+            "productId": 130,
+            "user": "Rachel Kim",
+            "rating": 5,
+            "comment": "Perfect for making sauce! Very firm and flavorful.",
+            "date": "2025-09-27T13:30:00Z"
+        },
+        {
+            "id": 16,
+            "productId": 130,
+            "user": "Tom Baker",
+            "rating": 2,
+            "comment": "A couple of them were bruised and overripe.",
+            "date": "2025-09-28T08:00:00Z"
+        },
+        {
+            "id": 17,
+            "productId": 135,
+            "user": "George Miller",
+            "rating": 5,
+            "comment": "Excellent for baked potatoes. Clean and no blemishes.",
+            "date": "2025-09-25T19:00:00Z"
+        },
+        {
+            "id": 18,
+            "productId": 144,
+            "user": "Jessica White",
+            "rating": 5,
+            "comment": "Creamy and delicious. Tastes so much better than other brands.",
+            "date": "2025-10-01T07:30:00Z"
+        },
+        {
+            "id": 19,
+            "productId": 144,
+            "user": "Frank Wright",
+            "rating": 4,
+            "comment": "Good milk, but the expiration date was a bit too soon.",
+            "date": "2025-09-30T20:00:00Z"
+        },
+        {
+            "id": 20,
+            "productId": 147,
+            "user": "Linda Hall",
+            "rating": 5,
+            "comment": "Beautiful dark yolks and strong shells. You can tell they're high quality.",
+            "date": "2025-10-02T08:15:00Z"
+        },
+        {
+            "id": 21,
+            "productId": 153,
+            "user": "BakerBen",
+            "rating": 5,
+            "comment": "My go-to flour for bread. Consistent results every time.",
+            "date": "2025-09-15T12:10:00Z"
+        },
+        {
+            "id": 22,
+            "productId": 155,
+            "user": "Ananya Sharma",
+            "rating": 4,
+            "comment": "Cooks up nicely, but needs a good rinse first.",
+            "date": "2025-09-22T18:45:00Z"
+        },
+        {
+            "id": 23,
+            "productId": 162,
+            "user": "Dan Carter",
+            "rating": 5,
+            "comment": "The best ketchup, hands down. Perfect balance of sweet and tangy.",
+            "date": "2025-09-20T17:00:00Z"
+        },
+        {
+            "id": 24,
+            "productId": 172,
+            "user": "MomOfThree",
+            "rating": 5,
+            "comment": "Gets all the stains out of my kids' clothes and smells amazing!",
+            "date": "2025-09-18T11:00:00Z"
+        },
+        {
+            "id": 25,
+            "productId": 172,
+            "user": "SensitiveSkin",
+            "rating": 3,
+            "comment": "Cleans well, but the fragrance irritated my skin a little.",
+            "date": "2025-09-21T15:30:00Z"
+        },
+        {
+            "id": 26,
+            "productId": 173,
+            "user": "CleanFreak",
+            "rating": 5,
+            "comment": "Super absorbent! One sheet goes a long way.",
+            "date": "2025-09-24T09:50:00Z"
+        },
+        {
+            "id": 27,
+            "productId": 178,
+            "user": "Sarah P.",
+            "rating": 5,
+            "comment": "I love the smell and how soft my skin feels after using it.",
+            "date": "2025-09-26T21:00:00Z"
+        },
+        {
+            "id": 28,
+            "productId": 180,
+            "user": "Mike Davis",
+            "rating": 4,
+            "comment": "Does the job well, leaves my mouth feeling clean.",
+            "date": "2025-09-29T07:00:00Z"
+        },
+        {
+            "id": 29,
+            "productId": 187,
+            "user": "GymGoer",
+            "rating": 5,
+            "comment": "Great for a quick protein-packed lunch. Good quality tuna.",
+            "date": "2025-10-01T12:30:00Z"
+        },
+        {
+            "id": 30,
+            "productId": 187,
+            "user": "Sandra Dee",
+            "rating": 3,
+            "comment": "A bit watery for my taste, but the flavor is okay.",
+            "date": "2025-09-27T14:00:00Z"
+        },
+        {
+            "id": 31,
+            "productId": 196,
+            "user": "FizzyFan",
+            "rating": 5,
+            "comment": "Classic taste, perfect amount of fizz.",
+            "date": "2025-09-30T19:20:00Z"
+        },
+        {
+            "id": 32,
+            "productId": 198,
+            "user": "Parent22",
+            "rating": 4,
+            "comment": "My kids love this juice. I wish it had a little less sugar.",
+            "date": "2025-09-28T10:00:00Z"
+        },
+        {
+            "id": 33,
+            "productId": 203,
+            "user": "SnackAttack",
+            "rating": 5,
+            "comment": "Dangerously addictive! Perfectly salty and crunchy.",
+            "date": "2025-10-02T20:00:00Z"
+        },
+        {
+            "id": 34,
+            "productId": 203,
+            "user": "HealthyEater",
+            "rating": 2,
+            "comment": "Way too salty and greasy for me.",
+            "date": "2025-09-29T16:00:00Z"
+        },
+        {
+            "id": 35,
+            "productId": 212,
+            "user": "GourmetCook",
+            "rating": 5,
+            "comment": "Excellent quality salmon fillets. Tasted very fresh even though they were frozen.",
+            "date": "2025-09-26T18:10:00Z"
+        },
+        {
+            "id": 36,
+            "productId": 221,
+            "user": "MealPrepper",
+            "rating": 5,
+            "comment": "Great value and quality. Perfect for my weekly meal prep.",
+            "date": "2025-09-29T13:00:00Z"
+        },
+        {
+            "id": 37,
+            "productId": 221,
+            "user": "John D.",
+            "rating": 4,
+            "comment": "Good chicken, but one of the packages had a small tear in it.",
+            "date": "2025-09-30T11:45:00Z"
+        },
+        {
+            "id": 38,
+            "productId": 223,
+            "user": "BreakfastLover",
+            "rating": 5,
+            "comment": "This is the best bacon I've ever had. Cooks up perfectly every time.",
+            "date": "2025-09-28T09:00:00Z"
+        },
+        {
+            "id": 39,
+            "productId": 223,
+            "user": "Ken Adams",
+            "rating": 5,
+            "comment": "Thick cut and not too fatty. Absolutely delicious.",
+            "date": "2025-10-01T08:30:00Z"
+        },
+        {
+            "id": 40,
+            "productId": 236,
+            "user": "ItalianChef",
+            "rating": 5,
+            "comment": "Very potent and flavorful garlic. A must-have in my kitchen.",
+            "date": "2025-10-03T08:00:00Z"
+        },
+        {
+            "id": 41,
+            "productId": 242,
+            "user": "HealthyLife",
+            "rating": 4,
+            "comment": "The asparagus was fresh and tender, but the spears were a little thin.",
+            "date": "2025-09-29T19:00:00Z"
+        },
+        {
+            "id": 42,
+            "productId": 220,
+            "user": "BurgerMaster",
+            "rating": 5,
+            "comment": "Perfect fat content for juicy burgers. Great flavor.",
+            "date": "2025-09-27T17:45:00Z"
         }
     ]
 }

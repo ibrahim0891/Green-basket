@@ -45,13 +45,14 @@ const ProductDetails = async ({ params }) => {
                         </div>
                         <div className='border border-gray-200'></div>
 
-                        <ShareItems />
+                        <ShareItems item={item} />
+
                         <p className='text-gray-400 my-3'>
                             {item.description}
                         </p>
                         <AddToCart item={item} />
                         <div className='py-2 flex items-center gap-2'>
-                            <span>Tags:</span> {item.tags.map((tag, index) => {
+                            <span>Tags:</span> {item?.tags?.map((tag, index) => {
                                 return <span className='p-1 px-3 bg-gray-100 text-gray-500  rounded-full mx-2' key={index}> {tag} </span>
                             })}
                         </div>
