@@ -129,9 +129,9 @@ export default function Footer() {
                     <div className="space-y-4">
                         <h3 className="text-xl font-light"> Download Mobile App</h3>
                         <div className="h-1 w-8 bg-primary rounded-full"></div>
-                        <div className="flex justify-between gap-4 flex-col lg:flex-row">
-                            <img className="lg:w-3/4" src="/images/App Store.png" alt="" />
-                            <img className="lg:w-3/4" src="/images/Google Play.png" alt="" />
+                        <div className="flex justify-between gap-4 flex-row lg:flex-col">
+                            <img className="max-w-[200px] lg:w-3/4" src="/images/App Store.png" alt="" />
+                            <img className="max-w-[200px] lg:w-3/4" src="/images/Google Play.png" alt="" />
                         </div>
                     </div>
                 </div>

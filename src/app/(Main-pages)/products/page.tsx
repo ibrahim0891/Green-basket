@@ -7,7 +7,7 @@ import { OrangeIcon } from "@phosphor-icons/react"
 const Home = () => {
     return (
         <div className="container-center">
-            <div className="grid grid-cols-[1fr_3fr] items-center  gap-8 py-8">
+            <div className="lg:grid lg:grid-cols-[1fr_3fr] items-center  gap-8 py-8 md:py-14">
                 <Categories>
                      <CategoryList Icon={OrangeIcon}/>
                 </Categories>

@@ -50,12 +50,12 @@ const Category = ({ params }: { params: { name: string } }) => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-[1fr_3fr] gap-8 mt-5">
+            <div className="grid grid-cols-1 grid-cols-[1fr_3fr] gap-8 mt-5">
                 <aside>
                     <div>
                         <FieldTitle name="All Categories" />
 
-                        <div className="flex flex-col gap-6">
+                        <div className="flex flex-row  gap-6">
                             <CategoryRadioButtonList selected={selected} setSelected={handleCategoryChange} />
                         </div>
                     </div>

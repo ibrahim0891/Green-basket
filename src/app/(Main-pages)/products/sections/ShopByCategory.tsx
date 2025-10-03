@@ -15,7 +15,7 @@ const ShopByCategory = async () => {
     return (
         <div className='py-14 container-center space-y-6'>
             <SectionHeader smallText='Categories' title='Shop by categories' />
-            <div className='grid grid-cols-6 gap-6'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6'>
                 {
                     categories?.map((category: Category, index: number) => {
                         const { id, image, name  } = category;

@@ -1,7 +1,7 @@
 'use client'
 import { ArrowRightIcon } from "@phosphor-icons/react"
 const LeftCarousel = () => {
-    return <div className={`bg-[url('/assets/Rectangle52.png')] text-white w-full h-full bg-cover p-12 space-y-5 bg-no-repeat flex flex-col justify-center items-start`}>
+    return <div className={`bg-[url('/assets/Rectangle52.png')] text-white w-full h-full bg-cover p-12 py-16 space-y-5 bg-no-repeat flex flex-col justify-center items-start`}>
         <h1 className="text-5xl font-semibold "> Fresh & Healthy <br />
             Organic Food </h1>
         <p className="pl-6 border-l border-l-gray-400">

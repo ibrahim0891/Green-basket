@@ -9,7 +9,7 @@ let data = res.data;
 
 let CategoryList =   ({Icon}  : {Icon : Icon})  => {
  
-  return <>
+  return <div className="">
       {data?.categories.slice(0, 8).map((category: Category, index: number) => {
           const { name, id } = category;
           return <div key={index} className="flex  items-center gap-4 hover:bg-green-500 text-nowrap hover:text-white py-5 px-8">
@@ -18,7 +18,7 @@ let CategoryList =   ({Icon}  : {Icon : Icon})  => {
           </div>
 
       })}
-  </>
+  </div>
 }
 
 export default CategoryList

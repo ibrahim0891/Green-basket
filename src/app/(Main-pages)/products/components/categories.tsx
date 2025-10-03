@@ -12,7 +12,7 @@ export interface Category {
  
 const Categories = ({children} : {children: JSX.Element}) => {
     return (
-        <div className="flex flex-col border border-gray-200">
+        <div className="hidden lg:flex flex-col border border-gray-200">
            {children}
         </div>
     );

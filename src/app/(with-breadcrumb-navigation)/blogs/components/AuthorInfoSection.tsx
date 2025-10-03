@@ -16,7 +16,7 @@ let AuthorInfoSection = ({ authorInfo }: { authorInfo: { name: string, date: { d
             </div>
 
         </div>
-        <div className="flex items-center gap-2 *:p-4 *:rounded-full *:hover:bg-green-500 *:hover:text-white">
+        <div className="hidden md:flex items-center gap-2 *:p-4 *:rounded-full *:hover:bg-green-500 *:hover:text-white">
             <span>
                 <FacebookLogoIcon />
             </span>

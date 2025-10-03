@@ -14,7 +14,7 @@ const Layout = ({ children }: { children: React.JSX.Element }) => {
         <div>
             <div className="bg-[url(/images/shopHero.jpg)]">
                 <div className=" backdrop-brightness-50 text-white w-full">
-                    <div className=" py-12 flex  items-center  px-12 gap-4 text-xl container m-auto '  ">
+                    <div className="container-center flex py-6 lg:py-12 lg:px-12 gap-4  text-base lg:text-xl container m-auto '  ">
                         <Link href="/" className="flex items-center gap-2">
                             <HouseIcon /> Home
                         </Link>

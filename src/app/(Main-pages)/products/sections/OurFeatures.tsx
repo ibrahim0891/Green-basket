@@ -30,12 +30,12 @@ const OurFeatures = () => {
     return (
         <div> 
             <section className='container-center'>
-                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 border-b-2 border-gray-200'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-b-2 border-gray-200'>
                     {features.map((item, index) => {
                         return (
                             <div
                                 className={
-                                    "transition-all flex gap-4 px-6 py-10 items-center justify-center hover:border-b-7 hover:border-b-primary"
+                                    "transition-all flex gap-4 px-6 py-10 items-center justify-center hover:border-b-4 hover:border-b-primary"
                                 }
                                 key={index}
                             >

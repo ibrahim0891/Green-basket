@@ -55,11 +55,11 @@ const BlogPage = async () => {
         <div className='min-h-screen'>
             <div className='container-center py-10'>
 
-                <div className="grid grid-cols-[1fr_3fr] gap-8">
+                <div className="grid grid-cols-[1fr_3fr] gap-8 hidden">
                     <div>
                         <FilterButton />
                     </div>
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between ">
 
                         <div>
                             <span> Sort by: </span>
@@ -72,7 +72,7 @@ const BlogPage = async () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-[1fr_3fr] gap-8 mt-5">
+                <div className="flex flex-col-reverse lg:grid grid-cols-[1fr_3fr] gap-8 ">
 
                     <aside>
 
@@ -83,7 +83,7 @@ const BlogPage = async () => {
 
                         <RecentBlogs  />
                     </aside>
-                    <div className='px-6'>
+                    <div>
 
                         <BlogSection blogs={blogs} />
                     </div>

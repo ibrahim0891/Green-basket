@@ -7,7 +7,7 @@ const ShareItems = ({ item }: { item: Product }) => {
     return (
         <section className='flex items-center justify-between text-lg my-3 '>
             <span>Brand : <span className='font-semibold'>{item.brand}</span></span>
-            <div className='flex items-center'>
+            <div className='hidden md:flex items-center'>
                 <span className='mr-2'>share item: </span>
                 <div className='flex items-center text-2xl *:hover:bg-green-500 *:hover:text-white *:rounded-full *:p-4 ' >
                     <span>

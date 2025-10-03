@@ -24,16 +24,16 @@ const BlogPage = async ({ params }) => {
     return (
         <div>
             <div className='container-center py-8'>
-                <div className='grid grid-cols-[3fr_1fr] gap-8'>
+                <div className='flex flex-col lg:grid grid-cols-[3fr_1fr] gap-8'>
                     <section className='space-y-6'>
-                        <div className='bg-gray-200 aspect-[3/1]'>
-
+                        <div className='bg-gray-200 aspect-[3/2] md:aspect-[3/1] flex items-center justify-center'>
+                            <p className='text-gray-400 text-sm'>image</p>
                         </div>
                         <div>
                             <CategoryAndAuthor category={category} author={author} />
                         </div>
 
-                        <h1 className='text-4xl font-semibold py-2'>
+                        <h1 className='hidden lg:text-4xl font-semibold py-2'>
                             {title}
                         </h1>
 
@@ -43,15 +43,17 @@ const BlogPage = async ({ params }) => {
 
                         <div>
                             <h3 className='text-2xl font-semibold'> {title} </h3>
-                            <p className='whitespace-pre-wrap py-6 text-gray-600 text-xl'>
+
+                            <p className='whitespace-pre-wrap py-6 text-gray-600 text-base font-light lg:text-xl leading-loose'>
                                 {description}
                             </p>
+
                             <div className='py-4'>
-                                <div className='w-full py-16 px-14 bg-[url(/ads-banner-bg.png)] bg-cover rounded-md'>
+                                <div className='w-full py-16 px-8 lg:px-14 bg-[url(/ads-banner-bg.png)] bg-cover bg-no-repeat rounded-md'>
                                     <div className='text-white space-y-4'>
                                         <span className='text-gray-200 text-lg'> SUMMER SALE </span>
-                                        <h1 className='text-5xl font-semibold'>Fresh Fruits</h1>
-                                        <Button label='Shop now' className='px-12'></Button>
+                                        <h1 className='text-xl lg:text-5xl font-semibold'>Fresh Fruits</h1>
+                                        <Button label='Shop now' className='px-8 lg:px-12'></Button>
                                     </div>
                                 </div>
                             </div>
@@ -60,8 +62,7 @@ const BlogPage = async ({ params }) => {
                     <section>
                         <PopularTags />
                         <OurGallary />
-        
-                        <RecentBlogs/>
+                        <RecentBlogs />
                     </section>
                 </div>
             </div>

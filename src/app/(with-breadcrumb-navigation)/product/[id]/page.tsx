@@ -27,11 +27,11 @@ const ProductDetails = async ({ params }) => {
         <div>
             <div className='container-center py-10'>
 
-                <div className='flex items-center *:w-1/2'>
-                    <div>
-                        <img src={item.image} alt="" />
+                <div className='flex items-center flex-col lg:flex-row justify-center lg:*:w-1/2'>
+                    <div className='flex items-center justify-center aspect-square w-full lg:w-fit lg:aspect-auto'>
+                        <img className='h-full' src={item.image} alt="" />
                     </div>
-                    <div>
+                    <div className='max-w-[648px]'>
                         <div className='space-y-4'>
                             <h1 className='text-4xl font-semibold'> {item.name} </h1>
                             <div className='flex items-center'>
@@ -60,18 +60,25 @@ const ProductDetails = async ({ params }) => {
 
                 </div>
 
-                <div className='my-10'>
-                    <div className='border-b border-gray-200 flex items-cente justify-center w-full'>
-                        <button className='py-6 px-8 border border-gray-200 '> Desciption </button>
-                        <button className='py-6 px-8 border border-gray-200 '> Additional Information </button>
-                        <button className='py-6 px-8 border border-gray-200 border-b-green-500 border-4'> Customer Feedback</button>
+                <div className="my-10">
+                    <div className="border-b border-gray-200 flex items-center justify-start sm:justify-center w-full overflow-x-auto no-scrollbar">
+                        <button className="py-6 px-8 border-b-4 border-transparent hover:border-b-green-500 whitespace-nowrap">
+                            Description
+                        </button>
+                        <button className="py-6 px-8 border-b-4 border-transparent hover:border-b-green-500 whitespace-nowrap">
+                            Additional Information
+                        </button>
+                        <button className="py-6 px-8 border-b-4 border-green-500 whitespace-nowrap">
+                            Customer Feedback
+                        </button>
                     </div>
                     <ReviewSection reviews={currentProductReview} />
                 </div>
 
+
                 <div className='my-10'>
                     <h1 className='text-3xl font-semibold text-center my-8'> Releated Products  </h1>
-                    <div className='grid grid-cols-5 gap-4'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4'>
                         {
                             products.filter((product: Product) => product.categoryId == item.categoryId).slice(0, 5).map((item, index) => {
                                 return <ProductCard product={item} key={index} />

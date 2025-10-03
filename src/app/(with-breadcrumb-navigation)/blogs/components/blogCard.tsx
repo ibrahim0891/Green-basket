@@ -17,7 +17,7 @@ const BlogCard = ({ blog }: { blog: Blog }) => {
     let { id, author, image, date: { day, month }, category, title } = blog
     return (
         <div className='rounded-md overflow-hidden border border-gray-200'>
-            <div className='bg-gray-100 w-full aspect-[3/2]  rounded-md flex items-center object-cover justify-center text-gray-400 relative '>
+            <div className='bg-gray-100 w-full aspect-[3/2]   rounded-md flex items-center object-cover justify-center text-gray-400 relative '>
                 <p>Image</p>
                 <div className='absolute bottom-0 left-0 m-2 rounded-sm text-xs text-center bg-white text-gray-700 border p-2 border-gray-100'>
                     <h2> {day}</h2>

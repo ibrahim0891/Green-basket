@@ -10,7 +10,7 @@ type ButtonProp = {
 
 const Button = ({ children , label, className }: ButtonProp) => {
     return (
-        <button className={`${className} bg-green-500 text-white active:scale-90 transition-all px-6 py-4 rounded-full`}>
+        <button className={`${className} bg-green-500 text-white active:scale-90 transition-all md:px-6 md:py-4 py-2 px-3 rounded-full`}>
             {label}
             {children}
         </button>
