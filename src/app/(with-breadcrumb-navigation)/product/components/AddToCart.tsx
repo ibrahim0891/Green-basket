@@ -21,7 +21,7 @@ const AddToCart = ({ item }: { item: Product }) => {
 
     useEffect(() => {
         let cartString = localStorage.getItem('cart')
-        let parsedCart = JSON.parse(cartString) ?? []
+        let parsedCart = cartString ? JSON.parse(cartString) : []
         setCart(parsedCart)
     }, [])
 
@@ -44,10 +44,10 @@ const AddToCart = ({ item }: { item: Product }) => {
     const handleAddToCart = (id) => {
         if (selectCount === 0) return;
 
-        let cartString = localStorage.getItem('cart')
-        let parsedCart = JSON.parse(cartString) ?? []
+        let cartString  = localStorage.getItem('cart') 
+        let parsedCart = cartString ? JSON.parse(cartString) : []
 
-        let matchedIndex = parsedCart.findIndex((cartItem) => cartItem.id == id)
+        let matchedIndex = parsedCart.findIndex((cartItem: Cart) => cartItem.id == id)
 
         if (matchedIndex != -1) {
             parsedCart[matchedIndex] = { count: selectCount, id }
@@ -57,6 +57,7 @@ const AddToCart = ({ item }: { item: Product }) => {
             let newCart = {
                 count: selectCount, id
             }
+            toast.info(name + ' added to cart!')
             localStorage.setItem('cart', JSON.stringify([...parsedCart, newCart]))
         } 
     };

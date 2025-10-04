@@ -8,8 +8,15 @@ import ReviewSection from '../components/reviews';
 import RatingStars from '@/app/Components/RatingStars';
 import AddToCart from '../components/AddToCart';
 
+export type Review = {
+    id : number , 
+    productId : number , 
+    user : string , 
+    comment : string , 
+    date : Date
+}
 
-const ProductDetails = async ({ params }) => {
+const ProductDetails = async ({ params } : {params : {id : number}}) => {
     let res = await axiosInstance.get('/api/products')
     let reviewRes = await axiosInstance.get('/api/review')
     let { id } = await params
@@ -17,7 +24,7 @@ const ProductDetails = async ({ params }) => {
     let { products } = res.data
     let { reviews } = reviewRes.data
 
-    let currentProductReview = reviews.filter((review) => review.productId == id)
+    let currentProductReview = reviews.filter((review : Review ) => review.productId == id)
 
 
     let item: Product = products.find((item: Product) => item.id == id)
@@ -27,11 +34,11 @@ const ProductDetails = async ({ params }) => {
         <div>
             <div className='container-center py-10'>
 
-                <div className='flex items-center flex-col lg:flex-row justify-center lg:*:w-1/2'>
+                <div className='flex items-center flex-col lg:flex-row justify-center *:lg:w-1/2'>
                     <div className='flex items-center justify-center aspect-square w-full lg:w-fit lg:aspect-auto'>
                         <img className='h-full' src={item.image} alt="" />
                     </div>
-                    <div className='max-w-[648px]'>
+                    <div className='lg:max-w-[648px]'>
                         <div className='space-y-4'>
                             <h1 className='text-4xl font-semibold'> {item.name} </h1>
                             <div className='flex items-center'>
