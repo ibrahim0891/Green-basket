@@ -15,15 +15,15 @@ import RecentBlogs from '../components/RecentBlogs';
 
 
 const BlogPage = async ({ params }) => {
-    let { blogId } = await params
-    let res = await axiosInstance.get('/api/blogs/' + blogId)
-    let blog: Blog = res.data
+    // let { blogId } = await params
+    // let res = await axiosInstance.get('/api/blogs/' + blogId)
+    // let blog: Blog = res.data
 
-    let { description, title, author, category, date: { day, month } } = blog
+    // let { description, title, author, category, date: { day, month } } = blog
 
     return (
         <div>
-            <div className='container-center py-8'>
+            {/* <div className='container-center py-8'>
                 <div className='flex flex-col lg:grid grid-cols-[3fr_1fr] gap-8'>
                     <section className='space-y-6'>
                         <div className='bg-gray-200 aspect-[3/2] md:aspect-[3/1] flex items-center justify-center'>
@@ -65,7 +65,7 @@ const BlogPage = async ({ params }) => {
                         <RecentBlogs />
                     </section>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

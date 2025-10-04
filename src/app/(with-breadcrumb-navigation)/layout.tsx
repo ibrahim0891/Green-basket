@@ -37,9 +37,8 @@ const Layout = ({ children }: { children: React.JSX.Element }) => {
                     </div>
                 </div>
             </div>
-            <Suspense fallback={<div className="w-full h-full aspect-square flex items-center justify-center"> Loading...</div>}>
-                {children}
-            </Suspense>
+
+            {/* {children} */}
         </div>
     );
 };

@@ -39,9 +39,8 @@ export default function RootLayout({
                 className={`${poppins.variable} antialiased`}
             >
                 <Nav />
-            <Suspense fallback='Loading...'>
-                {children}
-            </Suspense>
+             
+                {/* {children}  */}
                 
 
                <SubscribeToNewsLetter/>
