@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL: "https://ecobazar-ewty.vercel.app/",
-    // baseURL: "http://localhost:3000",
+    // baseURL: "https://ecobazar-ewty.vercel.app/",
+    baseURL: "http://localhost:3000",
     headers: {
         "Content-Type": "application/json",
     },

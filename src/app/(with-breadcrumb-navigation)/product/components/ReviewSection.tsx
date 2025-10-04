@@ -1,11 +1,12 @@
 
 import RatingStars from '@/app/Components/RatingStars';
 import React from 'react';
+import { Review } from '../[id]/page';
 
-const ReviewSection = ({ reviews }: { review: [] }) => {
+const ReviewSection = ({ reviewData }: { reviewData: Review[] }) => {
     return (
         <div className="my-8">
-            {reviews.map((review, index) => {
+            {reviewData.map((review, index) => {
                 const { id, user, rating, comment, date } = review;
                 return <div key={index} className='border-b border-gray-200 mb-4 py-6'>
                     <div className='flex items-center gap-4 '>

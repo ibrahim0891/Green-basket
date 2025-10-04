@@ -4,19 +4,23 @@ import axiosInstance from '@/app/lib/axios';
 import ProductCard, { Product } from '@/app/(Main-pages)/products/components/ProductCard';
 import React from 'react';
 import ShareItems from '../components/shareItems';
-import ReviewSection from '../components/reviews';
+import ReviewSection from '../components/ReviewSection';
 import RatingStars from '@/app/Components/RatingStars';
 import AddToCart from '../components/AddToCart';
+import ProductInfoSection from '../components/ProductInfoSection';
+import AdditionalInformation from '../components/AdditionalInformation';
+import DescriptionSection from '../components/DescriptionSection';
 
 export type Review = {
-    id : number , 
-    productId : number , 
-    user : string , 
-    comment : string , 
-    date : Date
+    id: number,
+    productId: number,
+    user: string,
+    comment: string,
+    date: Date,
+    rating: number
 }
 
-const ProductDetails = async ({ params } : {params : {id : number}}) => {
+const ProductDetails = async ({ params }: { params: { id: number } }) => {
     let res = await axiosInstance.get('/api/products')
     let reviewRes = await axiosInstance.get('/api/review')
     let { id } = await params
@@ -24,7 +28,7 @@ const ProductDetails = async ({ params } : {params : {id : number}}) => {
     let { products } = res.data
     let { reviews } = reviewRes.data
 
-    let currentProductReview = reviews.filter((review : Review ) => review.productId == id)
+    let currentProductReview = reviews.filter((review: Review) => review.productId == id)
 
 
     let item: Product = products.find((item: Product) => item.id == id)
@@ -57,6 +61,7 @@ const ProductDetails = async ({ params } : {params : {id : number}}) => {
                         <p className='text-gray-400 my-3'>
                             {item.description}
                         </p>
+
                         <AddToCart item={item} />
                         <div className='py-2 flex items-center gap-2'>
                             <span>Tags:</span> {item?.tags?.map((tag, index) => {
@@ -67,20 +72,11 @@ const ProductDetails = async ({ params } : {params : {id : number}}) => {
 
                 </div>
 
-                <div className="my-10">
-                    <div className="border-b border-gray-200 flex items-center justify-start sm:justify-center w-full overflow-x-auto no-scrollbar">
-                        <button className="py-6 px-8 border-b-4 border-transparent hover:border-b-green-500 whitespace-nowrap">
-                            Description
-                        </button>
-                        <button className="py-6 px-8 border-b-4 border-transparent hover:border-b-green-500 whitespace-nowrap">
-                            Additional Information
-                        </button>
-                        <button className="py-6 px-8 border-b-4 border-green-500 whitespace-nowrap">
-                            Customer Feedback
-                        </button>
-                    </div>
-                    <ReviewSection reviews={currentProductReview} />
-                </div>
+                <ProductInfoSection  
+                    reviewSection={<ReviewSection reviewData={currentProductReview}/>}
+                    additionalInformation={< AdditionalInformation/>}
+                    descriptionSection={<DescriptionSection/>}
+                />
 
 
                 <div className='my-10'>
