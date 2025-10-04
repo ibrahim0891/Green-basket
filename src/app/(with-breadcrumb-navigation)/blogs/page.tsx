@@ -48,12 +48,12 @@ export const PopularTags = () => {
     </div>
 }
 const BlogPage = async () => {
-    // let res: AxiosResponse = await axiosInstance.get('/api/blogs')
-    // let { blogs } = res.data
-    // let recentBlog = blogs.slice(0,3)
+    let res: AxiosResponse = await axiosInstance.get('/api/blogs')
+    let { blogs } = res.data
+    let recentBlog = blogs.slice(0,3)
     return (
         <div className='min-h-screen'>
-            {/* <div className='container-center py-10'>
+            <div className='container-center py-10'>
 
                 <div className="grid grid-cols-[1fr_3fr] gap-8 hidden">
                     <div>
@@ -90,7 +90,7 @@ const BlogPage = async () => {
 
                 </div>
 
-            </div> */}
+            </div>
         </div>
     );
 };

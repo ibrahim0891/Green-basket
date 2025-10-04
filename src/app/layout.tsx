@@ -40,7 +40,7 @@ export default function RootLayout({
             >
                 <Nav />
              
-                {/* {children}  */}
+                {children} 
                 
 
                <SubscribeToNewsLetter/>

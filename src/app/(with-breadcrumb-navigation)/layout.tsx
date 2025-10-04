@@ -38,7 +38,7 @@ const Layout = ({ children }: { children: React.JSX.Element }) => {
                 </div>
             </div>
 
-            {/* {children} */}
+            {children}
         </div>
     );
 };
