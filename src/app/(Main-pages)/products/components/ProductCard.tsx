@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 'use client'
 
+import RatingStars from "@/app/Components/RatingStars";
 import { ShoppingBagIcon, StarIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 
@@ -55,17 +56,7 @@ const ProductCard = ({ product }: { product: Product }) => {
                             <span className="line-through text-gray-400"> {oldPrice} </span>
                         </p>
                         <div className="flex mt-1.5">
-                            {new Array(5).fill("").map((value, index) => {
-                                return (
-                                    <StarIcon
-                                        color="#facc15"
-                                        className={`${index < rating ? "text-amber-300" : ""}`}
-                                        size={14}
-                                        weight={`${index < rating ? "fill" : "regular"}`}
-                                        key={index}
-                                    />
-                                );
-                            })}
+                             <RatingStars starCount={rating}/>
                         </div>
                     </Link>
                 </div>

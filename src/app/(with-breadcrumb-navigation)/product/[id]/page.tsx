@@ -16,23 +16,23 @@ export type Review = {
     productId: number,
     user: string,
     comment: string,
-    date: Date,
+    date: string,
     rating: number
 }
 
 const ProductDetails = async ({ params }: { params: { id: number } }) => {
-    let res = await axiosInstance.get('/api/products')
-    let reviewRes = await axiosInstance.get('/api/review')
     let { id } = await params
 
-    let { products } = res.data
-    let { reviews } = reviewRes.data
+    let res = await axiosInstance.get('/api/product-details/' + id)
+    let reviewRes = await axiosInstance.get('/api/review/' + id)
 
-    let currentProductReview = reviews.filter((review: Review) => review.productId == id)
+    let currentProductReview = reviewRes.data
+    let item: Product = res.data
 
+    let productCategoryId: number = item.categoryId
+    let relatedProductRes = await axiosInstance.get(`/api/products/related-product/${productCategoryId}`)
 
-    let item: Product = products.find((item: Product) => item.id == id)
-
+    let relatedProducts = relatedProductRes.data
 
     return (
         <div>
@@ -72,10 +72,10 @@ const ProductDetails = async ({ params }: { params: { id: number } }) => {
 
                 </div>
 
-                <ProductInfoSection  
-                    reviewSection={<ReviewSection reviewData={currentProductReview}/>}
-                    additionalInformation={< AdditionalInformation/>}
-                    descriptionSection={<DescriptionSection/>}
+                <ProductInfoSection
+                    reviewSection={<ReviewSection reviewData={currentProductReview} />}
+                    additionalInformation={< AdditionalInformation />}
+                    descriptionSection={<DescriptionSection />}
                 />
 
 
@@ -83,7 +83,7 @@ const ProductDetails = async ({ params }: { params: { id: number } }) => {
                     <h1 className='text-3xl font-semibold text-center my-8'> Releated Products  </h1>
                     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4'>
                         {
-                            products.filter((product: Product) => product.categoryId == item.categoryId).slice(0, 5).map((item, index) => {
+                            relatedProducts.map((item: Product, index: number) => {
                                 return <ProductCard product={item} key={index} />
                             })
                         }

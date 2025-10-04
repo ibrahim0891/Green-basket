@@ -6,11 +6,11 @@ import ProductCard, { Product } from "@/app/(Main-pages)/products/components/Pro
 let res = await axiosInstance.get('/api/products')
 let productList = res.data;
 
-const ProductResultSection = ({ categoryId }) => {
+const ProductResultSection = ({ categoryId , setResultCount }) => {
     let products: Product[] = productList?.products
 
     let selectedProduct = products.filter(item => item.categoryId == categoryId)
-    console.log(categoryId);
+    setResultCount(selectedProduct.length)
     return <div className=' space-y-6'>
 
         {

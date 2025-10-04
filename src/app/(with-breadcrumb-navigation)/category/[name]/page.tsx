@@ -21,6 +21,7 @@ const Category = ({ params }: { params: { name: string } }) => {
 
 
     let [selected, setSelected] = useState(id)
+    let [resultCount ,setResultCount] = useState<number>(0)
 
     const handleCategoryChange = (newId: string) => {
         setSelected(newId);
@@ -46,7 +47,7 @@ const Category = ({ params }: { params: { name: string } }) => {
                             <option value="oldest">Oldest</option>
                         </select>
                     </div>
-                    <div> 53 Result Found</div>
+                    <div> {resultCount} Result Found</div>
                 </div>
             </div>
 
@@ -96,7 +97,7 @@ const Category = ({ params }: { params: { name: string } }) => {
 
                 <div>
                     <ProductResultWrapper>
-                        <ProductResultSection categoryId={selected} />
+                        <ProductResultSection setResultCount={setResultCount} categoryId={selected} />
                     </ProductResultWrapper>
                 </div>
             </div>

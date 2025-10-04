@@ -8,12 +8,13 @@ const res = await axiosInstance.get('/api/categories')
 const { categories } = res.data
 
 const CategoryRadioButtonList = ({ selected  , setSelected}) => {
+ 
     return (
         <div className='space-y-3 mb-10 '>
             {
                 categories.map((item) => {
                     let { id, name, productCount } = item;
-                    return <label key={id} className="flex items-center space-x-6 ">
+                    return <label key={id} className="flex items-center space-x-6  cursor-pointer active:scale-95 transition-all">
                         <input
                             type="radio"
                             name={name}
@@ -24,8 +25,7 @@ const CategoryRadioButtonList = ({ selected  , setSelected}) => {
                         />
                         <div className="w-6 aspect-square rounded-full peer-checked:bg-green-500 border-3 border-gray-200 peer-checked:border-white p-2 peer-checked:outline-1 peer-checked:outline-green-500"></div>
                         <div className='text-base '>
-                            <span className="">{name}</span>
-                            <span> {productCount} </span>
+                            <span className="">{name}</span> 
                         </div>
 
                     </label>

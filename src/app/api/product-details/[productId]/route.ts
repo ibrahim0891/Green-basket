@@ -15,5 +15,5 @@ export async function GET(request: NextRequest, context: { params: Params }) {
         return NextResponse.json({ error: "Item not found" });
     }
 
-    return NextResponse.json("selectedProduct");
+    return NextResponse.json(selectedProduct);
 }
