@@ -1,12 +1,12 @@
 import axiosInstance from "@/app/lib/axios"
-import ProductCard, { Product } from "@/app/(Main-pages)/products/components/ProductCard";
+import ProductCard, { Product } from "@/app/(Main-pages)/home/components/ProductCard";
 
 
 
 let res = await axiosInstance.get('/api/products')
 let productList = res.data;
 
-const ProductResultSection = ({ categoryId , setResultCount }) => {
+const ProductResultSection = ({ categoryId, setResultCount }) => {
     let products: Product[] = productList?.products
 
     let selectedProduct = products.filter(item => item.categoryId == categoryId)

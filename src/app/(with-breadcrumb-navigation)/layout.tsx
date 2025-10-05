@@ -12,9 +12,9 @@ const Layout = ({ children }: { children: React.JSX.Element }) => {
 
     return (
         <div>
-            <div className="bg-[url(/images/shopHero.jpg)]">
-                <div className=" backdrop-brightness-50 text-white w-full">
-                    <div className="container-center flex py-6 lg:py-12 lg:px-12 gap-4  text-base lg:text-xl container m-auto '  ">
+            <div className="bg-[url(/images/shopHero.jpg)] bg-cover rotate-180">
+                <div className=" backdrop-brightness-50 text-white w-full rotate-180">
+                    <div className="container-center flex py-6 lg:py-8 lg:px-12 gap-4  text-base lg:text-xl container m-auto '  ">
                         <Link href="/" className="flex items-center gap-2">
                             <HouseIcon /> Home
                         </Link>

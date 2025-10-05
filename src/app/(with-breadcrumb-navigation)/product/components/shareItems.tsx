@@ -1,5 +1,5 @@
 'use client'
-import { Product } from '@/app/(Main-pages)/products/components/ProductCard';
+import { Product } from '@/app/(Main-pages)/home/components/ProductCard';
 import { FacebookLogoIcon, InstagramLogoIcon, TwitterLogoIcon, PinterestLogoIcon } from '@phosphor-icons/react';
 import React from 'react';
 

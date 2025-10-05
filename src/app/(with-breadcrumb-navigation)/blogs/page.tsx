@@ -24,7 +24,7 @@ export type Blog = {
 };
 
 export const OurGallary = () => {
-    return <div className="my-10">
+    return <div className="mb-10">
         <FieldTitle name="Our Gallary" />
         <div className='grid grid-cols-4 gap-4'>
             {new Array(8).fill('').map((value, index) => {
@@ -49,8 +49,7 @@ export const PopularTags = () => {
 }
 const BlogPage = async () => {
     let res: AxiosResponse = await axiosInstance.get('/api/blogs')
-    let { blogs } = res.data
-    let recentBlog = blogs.slice(0,3)
+    let { blogs } = res.data 
     return (
         <div className='min-h-screen'>
             <div className='container-center py-10'>

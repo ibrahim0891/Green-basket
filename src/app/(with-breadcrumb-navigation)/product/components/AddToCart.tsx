@@ -3,7 +3,7 @@
 
 'use client'
 
-import { Product } from '@/app/(Main-pages)/products/components/ProductCard';
+import { Product } from '@/app/(Main-pages)/home/components/ProductCard';
 import { MinusIcon, PlusIcon } from '@phosphor-icons/react';
 import React, { useEffect, useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
@@ -14,7 +14,7 @@ export type Cart = {
 }
 
 const AddToCart = ({ item }: { item: Product }) => {
-    const { brand, categoryId, id, price ,name,stockStatus } = item
+    const { brand, categoryId, id, price, name, stockStatus } = item
     const [selectCount, setSelectCount] = useState<number>(0);
 
     const [cart, setCart] = useState<Cart[]>([]);
@@ -47,7 +47,7 @@ const AddToCart = ({ item }: { item: Product }) => {
     const handleAddToCart = (id) => {
         if (selectCount === 0) return;
 
-        let cartString  = localStorage.getItem('cart') 
+        let cartString = localStorage.getItem('cart')
         let parsedCart = cartString ? JSON.parse(cartString) : []
 
         let matchedIndex = parsedCart.findIndex((cartItem: Cart) => cartItem.id == id)
@@ -62,7 +62,7 @@ const AddToCart = ({ item }: { item: Product }) => {
             }
             toast.success(name + ' added to cart!')
             localStorage.setItem('cart', JSON.stringify([...parsedCart, newCart]))
-        } 
+        }
     };
     return (
         <div className='border-y border-gray-200 py-3 my-2 flex items-center gap-4'>
@@ -76,8 +76,8 @@ const AddToCart = ({ item }: { item: Product }) => {
                     <PlusIcon />
                 </button>
             </div>
-            <button className={` ${stockStatus == 'In Stock' ? 'bg-green-500' : "bg-gray-300" } flex-1 text-white py-2 text-lg rounded-full`} onClick={() => handleAddToCart(id)}>
-               {stockStatus == 'In Stock' ? 'Add to cart' : 'Item not available'}
+            <button className={` ${stockStatus == 'In Stock' ? 'bg-green-500' : "bg-gray-300"} flex-1 text-white py-2 text-lg rounded-full`} onClick={() => handleAddToCart(id)}>
+                {stockStatus == 'In Stock' ? 'Add to cart' : 'Item not available'}
             </button>
         </div>
     );

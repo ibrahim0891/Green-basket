@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import axiosInstance from '@/app/lib/axios';
-import ProductCard, { Product } from '@/app/(Main-pages)/products/components/ProductCard';
+import ProductCard, { Product } from '@/app/(Main-pages)/home/components/ProductCard';
 import React from 'react';
 import ShareItems from '../components/shareItems';
 import ReviewSection from '../components/ReviewSection';
@@ -54,7 +54,7 @@ const ProductDetails = async ({ params }: { params: { id: number } }) => {
                             <span className='line-through text-gray-400 text-lg'> ${item.oldPrice} </span>
                             <span className=' text-green-700'> ${item.price} </span>
                             <span className='bg-amber-500 font-black text-white p-1 px-2 rounded-md text-xs'>
-                                {(((item.oldPrice - item.price) / item.oldPrice)*100).toFixed(0)}% off
+                                {(((item.oldPrice - item.price) / item.oldPrice) * 100).toFixed(0)}% off
                             </span>
                         </div>
 

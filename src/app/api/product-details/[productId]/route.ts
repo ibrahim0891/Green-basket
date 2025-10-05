@@ -1,5 +1,5 @@
 import allProduct from "@/app/data/products.json";
-import { Product } from "@/app/(Main-pages)/products/components/ProductCard";
+import { Product } from "@/app/(Main-pages)/home/components/ProductCard";
 import { NextRequest, NextResponse } from "next/server";
 
 type Params = { productId: number };
