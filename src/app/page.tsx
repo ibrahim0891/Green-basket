@@ -9,11 +9,11 @@ import Sponsor from "./(Main-pages)/products/sections/Sponsor";
 
 export default function App() {
     return <div>
-        <Home></Home>
+        {/* <Home></Home>
         <OurFeatures />
         <DiscountAds />
         <ShopByCategory />
         <FeaturedProduct />
-        <Sponsor />
+        <Sponsor /> */}
     </div>
 }   

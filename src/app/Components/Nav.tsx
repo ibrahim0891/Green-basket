@@ -4,6 +4,7 @@ import { CaretDownIcon, HeartIcon, ListIcon, MagnifyingGlassIcon, PhoneCallIcon,
 import Logo from './Logo';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import SearchBar from './SearchBar';
 
 type NavItem = {
     name: string, link: string, downArray: boolean
@@ -33,13 +34,7 @@ const Nav = () => {
                     {/* logo */}
                     <Logo />
                     {/* search bar  */}
-                    <div className='hidden lg:block'>
-                        <div className='flex items-center border border-gray-200 rounded-lg overflow-hidden'>
-                            <MagnifyingGlassIcon className='mx-3' />
-                            <input type="search" placeholder='search' className='focus:outline-none py-2' />
-                            <button className='bg-green-500 text-white px-6 py-2'> Search </button>
-                        </div>
-                    </div>
+                    <SearchBar/>
 
                     {/* cart option and wishlist  */}
                     <Link href={'/shopping-cart'}>
