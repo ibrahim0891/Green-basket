@@ -35,7 +35,7 @@ const OurFeatures = () => {
                         return (
                             <div
                                 className={
-                                    "transition-all flex gap-4 px-6 py-10 items-center justify-center hover:border-b-4 hover:border-b-primary"
+                                    "transition-all flex flex-col sm:flex-row gap-4 px-6 py-10 items-center justify-center hover:border-b-4 hover:border-b-green-100"
                                 }
                                 key={index}
                             >
@@ -44,7 +44,7 @@ const OurFeatures = () => {
                                     className='w-[72px]'
                                     alt=''
                                 />
-                                <div className='space-y-2'>
+                                <div className='space-y-2 text-center sm:text-left'>
                                     <h4 className='text-md text-nowrap font-semibold'>
                                         {item.title}
                                     </h4>

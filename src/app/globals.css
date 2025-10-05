@@ -49,7 +49,7 @@ body {
 }
 
 .container-center {
-    @apply container mx-auto px-8 lg:px-12;
+    @apply container mx-auto px-4  lg:px-12;
 }
 
 .tab-active{

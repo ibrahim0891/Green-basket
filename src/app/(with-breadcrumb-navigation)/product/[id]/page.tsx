@@ -42,18 +42,22 @@ const ProductDetails = async ({ params }: { params: { id: number } }) => {
                     <div className='flex items-center justify-center aspect-square w-full lg:w-fit lg:aspect-auto'>
                         <img className='h-full' src={item.image} alt="" />
                     </div>
-                    <div className='lg:max-w-[648px]'>
+                    <div className='lg:max-w-[648px] w-full'>
                         <div className='space-y-4'>
-                            <h1 className='text-4xl font-semibold'> {item.name} </h1>
+                            <h1 className='text-2xl sm:text-3xl md:text-4xl font-semibold'> {item.name} </h1>
                             <div className='flex items-center'>
                                 <RatingStars starCount={item.rating} />
                                 <span className='ml-2'> {item.rating} </span>
                             </div>
                         </div>
                         <div className='text-2xl my-4'>
-                            <span className='line-through text-gray-400'> {item.oldPrice} </span>
+                            <span className='line-through text-gray-400 text-lg'> ${item.oldPrice} </span>
                             <span className=' text-green-700'> ${item.price} </span>
+                            <span className='bg-amber-500 font-black text-white p-1 px-2 rounded-md text-xs'>
+                                {(((item.oldPrice - item.price) / item.oldPrice)*100).toFixed(0)}% off
+                            </span>
                         </div>
+
                         <div className='border border-gray-200'></div>
 
                         <ShareItems item={item} />
@@ -63,9 +67,9 @@ const ProductDetails = async ({ params }: { params: { id: number } }) => {
                         </p>
 
                         <AddToCart item={item} />
-                        <div className='py-2 flex items-center gap-2'>
+                        <div className='py-2 flex items-center gap-2 overflow-auto'>
                             <span>Tags:</span> {item?.tags?.map((tag, index) => {
-                                return <span className='p-1 px-3 bg-gray-100 text-gray-500  rounded-full mx-2' key={index}> {tag} </span>
+                                return <span className='p-1 px-3 bg-gray-100 text-gray-500  text-nowrap rounded-full mx-2' key={index}> {tag} </span>
                             })}
                         </div>
                     </div>
@@ -81,7 +85,7 @@ const ProductDetails = async ({ params }: { params: { id: number } }) => {
 
                 <div className='my-10'>
                     <h1 className='text-3xl font-semibold text-center my-8'> Releated Products  </h1>
-                    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4'>
+                    <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4'>
                         {
                             relatedProducts.map((item: Product, index: number) => {
                                 return <ProductCard product={item} key={index} />

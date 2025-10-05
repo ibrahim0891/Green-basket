@@ -4,11 +4,16 @@ import React from 'react';
 import { Review } from '../[id]/page';
 
 const ReviewSection = ({ reviewData }: { reviewData: Review[] }) => {
+    if(reviewData.length == 0){
+        return <div className='py-10 text-center aspect-video w-1/2 m-auto flex items-center justify-center border my-8 text-gray-500'>
+            <p> No reviews avaliable!</p>
+        </div>
+    }
     return (
         <div className="my-8">
             {reviewData.map((review, index) => {
                 const { id, user, rating, comment, date } = review;
-                return <div key={index} className='border-b border-gray-200 mb-4 py-6'>
+                return <div key={index} className='border-b border-gray-200 mb-4 py-6 px-6'>
                     <div className='flex items-center gap-4 '>
                         <img src="https://t4.ftcdn.net/jpg/02/92/17/33/360_F_292173322_iGYOpBVC52OwTfw9SsZ015geEbNXaWk8.jpg" className='w-10 rounded-full aspect-square object-cover' alt="" />
                         <div className='py-3 space-y-2'>

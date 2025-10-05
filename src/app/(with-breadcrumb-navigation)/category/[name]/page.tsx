@@ -1,7 +1,7 @@
 'use client'
 
 import Button from "@/app/Components/Button";
-import { Slider } from "@/components/ui/slider"; 
+import { Slider } from "@/components/ui/slider";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import ProductResultWrapper from "../ProductResult";
@@ -21,7 +21,7 @@ const Category = ({ params }: { params: { name: string } }) => {
 
 
     let [selected, setSelected] = useState(id)
-    let [resultCount ,setResultCount] = useState<number>(0)
+    let [resultCount, setResultCount] = useState<number>(0)
 
     const handleCategoryChange = (newId: string) => {
         setSelected(newId);
@@ -34,10 +34,8 @@ const Category = ({ params }: { params: { name: string } }) => {
     return <div className="min-h-screen">
         <div className="container-center py-10 ">
 
-            <div className="grid grid-cols-[1fr_3fr] gap-8">
-                <div>
-                    <FilterButton />
-                </div>
+            <div className="grid  gap-8">
+
                 <div className="flex items-center justify-between">
 
                     <div>
@@ -51,7 +49,7 @@ const Category = ({ params }: { params: { name: string } }) => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 grid-cols-[1fr_3fr] gap-8 mt-5">
+            <div className="grid  grid-cols-[1fr_3fr] gap-8 mt-5">
                 <aside>
                     <div>
                         <FieldTitle name="All Categories" />
@@ -71,13 +69,13 @@ const Category = ({ params }: { params: { name: string } }) => {
                         <FieldTitle name="Rattings " />
                         <div className="space-y-3">
                             <div className="flex items-center gap-3 text-amber-300">
-                                <RatingStars starCount={5}/>
+                                <RatingStars starCount={5} />
                             </div>
                             <div className="flex items-center gap-3 text-amber-300">
-                                <RatingStars starCount={4}/>
+                                <RatingStars starCount={4} />
                             </div>
                             <div className="flex items-center gap-3 text-amber-300">
-                              <RatingStars starCount={3}/>
+                                <RatingStars starCount={3} />
                             </div>
 
                         </div>
@@ -96,9 +94,7 @@ const Category = ({ params }: { params: { name: string } }) => {
                 </aside>
 
                 <div>
-                    <ProductResultWrapper>
-                        <ProductResultSection setResultCount={setResultCount} categoryId={selected} />
-                    </ProductResultWrapper>
+                    <ProductResultSection setResultCount={setResultCount} categoryId={selected} />
                 </div>
             </div>
         </div>
