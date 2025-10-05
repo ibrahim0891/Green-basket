@@ -38,7 +38,7 @@ const ProductCard = ({ product }: { product: Product }) => {
         <Link href={{ pathname: `/product/${id}`, query: { categoryId } }} >
             <div
                 onClick={() => null}
-                className=" border border-gray-200 overflow-hidden rounded-md shrink-0 h-full hover:scale-95 transition-all"
+                className="-z-10 border border-gray-200 overflow-hidden rounded-md shrink-0 h-full hover:scale-95 transition-all"
             >
                 <div className="aspect-[1/1] relative">
                     <img

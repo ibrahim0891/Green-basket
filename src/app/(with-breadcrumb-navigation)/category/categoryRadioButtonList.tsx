@@ -7,8 +7,14 @@ import React from 'react';
 const res = await axiosInstance.get('/api/categories')
 const { categories } = res.data
 
-const CategoryRadioButtonList = ({ selected  , setSelected}) => {
- 
+const CategoryRadioButtonList = ({ setCategorySidebarOpen, selected, setSelected, setCategoryName }) => {
+    
+
+    let handleRadioInputChange = (id , name) => {
+        setSelected(id)
+        setCategorySidebarOpen(false)
+        setCategoryName(name)
+    }
     return (
         <div className='space-y-3 mb-10 '>
             {
@@ -21,7 +27,7 @@ const CategoryRadioButtonList = ({ selected  , setSelected}) => {
                             value={name}
                             checked={selected == id}
                             className="hidden peer"
-                            onChange={()=> setSelected(id)}
+                            onChange={() => handleRadioInputChange(id , name)}
                         />
                         <div className="w-6 aspect-square rounded-full peer-checked:bg-green-500 border-3 border-gray-200 peer-checked:border-white p-2 peer-checked:outline-1 peer-checked:outline-green-500"></div>
                         <div className='text-base '>

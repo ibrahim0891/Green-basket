@@ -55,7 +55,7 @@ const Nav = () => {
 
     return (
         <div className='bg-white shadow sticky top-0 z-10 '>
-            <div className='m-auto   md:pt-4  py-2 container-center  '>
+            <div className='m-auto   md:pt-4  py-2 container-center relative '>
                 <div className='flex items-center justify-between  mb-2 '>
 
                     <span className='p-3 text-xl md:text-2xl md:hidden border border-gray-100 active:scale-95 duration-200 rounded-sm ' onClick={handleNavToggle}>
@@ -124,7 +124,7 @@ const Nav = () => {
 
 
                 {/* mobile side nav  */}
-                <div className={`flex  lg:hidden flex-col justify-between fixed top-0 left-0 bg-white h-screen w-2/3 p-6 border-r border-gray-200 transition-all ${isNavOpen ? '-translate-x-full' : 'translate-0'}`}>
+                <div className={`flex  lg:hidden flex-col justify-between fixed top-0 left-0 z-50 bg-white h-screen w-2/3 p-6 border-r border-gray-200 transition-all ${isNavOpen ? '-translate-x-full' : 'translate-0'}`}>
                     <div className='w-full'>
                         <div className='flex items-center justify-between pb-4 mb-4 border-b border-gray-200'>
                             <Logo />

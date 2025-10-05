@@ -11,7 +11,7 @@ const ProductResultSection = ({ categoryId , setResultCount }) => {
 
     let selectedProduct = products.filter(item => item.categoryId == categoryId)
     setResultCount(selectedProduct.length)
-    return <div className=' space-y-6'>
+    return <div className=' space-y-6 '>
 
         {
             selectedProduct.length == 0 ?
@@ -19,7 +19,7 @@ const ProductResultSection = ({ categoryId , setResultCount }) => {
                     <p> No product Found</p>
                 </div>
                 :
-                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 my-8'>
+                <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 my-8'>
                     {
                         selectedProduct?.map((product) => {
                             return <ProductCard key={product.id} product={product} />
