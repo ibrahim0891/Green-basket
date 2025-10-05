@@ -2,15 +2,20 @@
 'use client'
 
 import { MagnifyingGlassIcon } from '@phosphor-icons/react';import Link from 'next/link';
- ;
+import { useRouter } from 'next/navigation';
+
 import React, { useState } from 'react';
 
 const SearchBar = () => {
     let [userInput, setUserInput] = useState<string>('')
+    const router = useRouter(); 
+
+    
     
 
     let handleSubmit = (e) => {
         e.preventDefault(); 
+        router.push('/search?query='+userInput)
     }
 
     return (
