@@ -15,6 +15,7 @@ type NavItem = {
 const navData: NavItem[] = [
     { name: "Home", link: "/", downArray: true },
     { name: "Blogs", link: "/blogs", downArray: true },
+    { name: "Products", link: "/category/All Product?id=all", downArray: true },
     { name: "Login", link: "/auth/login", downArray: false },
     { name: "About Us", link: "/about", downArray: false },
 ];

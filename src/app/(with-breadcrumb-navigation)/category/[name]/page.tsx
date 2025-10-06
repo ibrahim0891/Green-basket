@@ -14,25 +14,27 @@ import { ListPlusIcon } from "@phosphor-icons/react";
 
 
 
-const Category = (  ) => {
+const Category = () => {
     let searchParams = useSearchParams()
     let router = useRouter()
     let pathname = usePathname()
     let id = searchParams.get('id')
 
-    let categoryName = pathname.split('/')[2]
+    let categoryName = decodeURIComponent(pathname.split('/')[2])
+
+
 
     let [selected, setSelected] = useState(id)
-    let [selectedCategoryName , setCategoryName] = useState(categoryName)
+    let [selectedCategoryName, setCategoryName] = useState(categoryName)
     let [resultCount, setResultCount] = useState<number>(0)
-    let [categorySidebarOpen , setCategorySidebarOpen] = useState<boolean>(false)
+    let [categorySidebarOpen, setCategorySidebarOpen] = useState<boolean>(false)
 
- 
-    const handleCategoryChange = (newId: string) => {
+
+    const handleCategoryChange = (newId: string, name: string) => {
         setSelected(newId);
         const newSearchParams = new URLSearchParams(searchParams.toString());
         newSearchParams.set('id', newId);
-        router.replace(`${categoryName}?${newSearchParams.toString()}`);
+        router.replace(`/category/${name}?${newSearchParams.toString()}`);
     }
 
 
@@ -42,13 +44,13 @@ const Category = (  ) => {
             <div className="grid  gap-8">
 
                 <div className="flex items-center justify-between ">
-                    <span className="p-4 rounded-md border border-gray-200 flex items-center gap-4 cursor-pointer active:scale-90 transition-all" onClick={()=>setCategorySidebarOpen(!categorySidebarOpen)}>
-                            <ListPlusIcon/>
-                            <span>
+                    <span className="p-4 rounded-md border border-gray-200 flex items-center gap-4 cursor-pointer active:scale-90 transition-all" onClick={() => setCategorySidebarOpen(!categorySidebarOpen)}>
+                        <ListPlusIcon />
+                        <span>
                             {selectedCategoryName}
-                            </span>
                         </span>
-                     
+                    </span>
+
                     <div> {resultCount} Result Found</div>
                 </div>
             </div>

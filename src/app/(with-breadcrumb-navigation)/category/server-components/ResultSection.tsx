@@ -9,7 +9,10 @@ let productList = res.data;
 const ProductResultSection = ({ categoryId, setResultCount }) => {
     let products: Product[] = productList?.products
 
-    let selectedProduct = products.filter(item => item.categoryId == categoryId)
+    let selectedProduct = categoryId === 'all'
+        ? products
+        : products.filter(item => item.categoryId == categoryId);
+
     setResultCount(selectedProduct.length)
     return <div className=' space-y-6 '>
 
