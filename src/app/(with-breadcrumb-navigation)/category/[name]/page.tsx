@@ -38,7 +38,7 @@ const Category = () => {
     }
 
 
-    return <div className="min-h-screen">
+    return <div className="min-h-screen  ">
         <div className="container-center py-10 ">
 
             <div className="grid  gap-8">
@@ -55,8 +55,8 @@ const Category = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-8 mt-5 relative">
-                <aside className={`absolute sm:static z-10 bg-white overflow-hidden transition-all ${categorySidebarOpen ? 'w-full' : 'w-0 sm:w-auto'}`}>
+            <div className="grid grid-cols-1 sm:grid-cols-[1fr_3fr] gap-8 mt-5 relative " >
+                <aside className={`absolute  top-0 sm:static z-10 bg-white overflow-hidden transition-all ${categorySidebarOpen ? 'w-full' : 'w-0 sm:w-auto'}`}>
                     <div>
                         <FieldTitle name="All Categories" />
 
@@ -65,10 +65,9 @@ const Category = () => {
                         </div>
                     </div>
 
-                    <div className="my-10 hidden">
+                    <div className="my-10  opacity-25">
                         <FieldTitle name="Price " />
                         <Slider min={0} max={100} step={2} defaultValue={[12, 32]} className="my-10"></Slider>
-
                     </div>
 
                     <div className="hidden">

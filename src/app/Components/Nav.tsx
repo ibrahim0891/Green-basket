@@ -55,7 +55,7 @@ const Nav = () => {
 
 
     return (
-        <div className='bg-white shadow sticky top-0 z-10 '>
+        <div className='bg-white shadow sticky top-0 z-50 '>
             <div className='m-auto   md:pt-4  py-2 container-center relative '>
                 <div className='flex items-center justify-between  mb-2 '>
 

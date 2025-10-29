@@ -8,7 +8,7 @@ const Logo = ({ color }: { color?: string }) => {
     return (
         <Link href={'/'}>
             <div className='flex items-center gap-2 text-green-500 text-2xl '>
-                <PlantIcon weight='fill' /> <span className={color ?? 'text-black'}> Ecobazar </span>
+                <PlantIcon weight='fill' /> <span className={color ?? 'text-black'}> Green Busket </span>
             </div>
         </Link>
 
