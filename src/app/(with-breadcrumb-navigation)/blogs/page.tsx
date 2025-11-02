@@ -48,7 +48,7 @@ export const PopularTags = () => {
 }
 const BlogPage = async () => {
     let res: AxiosResponse = await axiosInstance.get('/api/blogs')
-    let  {blogs}  = res.data 
+    let  blogs  = res.data 
 
     
   
