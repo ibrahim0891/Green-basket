@@ -2,7 +2,7 @@
 'use client'
 
 import RatingStars from "@/app/Components/RatingStars";
-import { ArrowRightIcon, ShoppingBagIcon, StarIcon } from "@phosphor-icons/react";
+import {  ShoppingBagIcon   } from "@phosphor-icons/react";
 
 import Link from "next/link";
 

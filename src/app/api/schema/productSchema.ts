@@ -59,4 +59,4 @@ const ProductSchema = new mongoose.Schema(
 );
 
 export default mongoose.models.Product ||
-    mongoose.model("product", ProductSchema);
+    mongoose.model("Product", ProductSchema);

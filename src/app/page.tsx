@@ -6,7 +6,7 @@ import ShopByCategory from "./(Main-pages)/home/sections/ShopByCategory";
 import Sponsor from "./(Main-pages)/home/sections/Sponsor";
 import Testimonial from "./(Main-pages)/home/sections/Testimonial";
 
-import app from "./lib/firebaseClient";
+ 
 export default function App() {
      
     return <div>

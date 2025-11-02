@@ -1,13 +1,10 @@
 'use client'
-
-import Button from "@/app/Components/Button";
+ 
 import { Slider } from "@/components/ui/slider";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
-import ProductResultWrapper from "../ProductResult";
+import {  useState } from "react"; 
 import ProductResultSection from "../server-components/ResultSection";
-import CategoryRadioButtonList from "../categoryRadioButtonList";
-import FilterButton from "../client-componets/FIlterButton";
+import CategoryRadioButtonList from "../categoryRadioButtonList"; 
 import RatingStars from "@/app/Components/RatingStars";
 import FieldTitle from "../server-components/FieldTitle";
 import { ListPlusIcon } from "@phosphor-icons/react";

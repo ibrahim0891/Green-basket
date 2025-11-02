@@ -17,7 +17,7 @@ export type Cart = {
 const AddToCart = ({ item }: { item: Product }) => {
     const { user } = userStore()
     console.log(user);
-    const { brand, categoryId, id, price, name, stockStatus } = item
+    const { id, name, stockStatus } = item
     const [selectCount, setSelectCount] = useState<number>(0);
 
     const [cart, setCart] = useState<Cart[]>([]);

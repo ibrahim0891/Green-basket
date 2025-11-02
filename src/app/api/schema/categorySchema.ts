@@ -33,4 +33,4 @@ const CategorySchema = new mongoose.Schema(
 );
  
 export default mongoose.models.Category ||
-    mongoose.model("category", CategorySchema);
+    mongoose.model("Category", CategorySchema);

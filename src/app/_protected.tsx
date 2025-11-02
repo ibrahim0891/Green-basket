@@ -14,6 +14,8 @@ const Protected = ({ children, redirect = '/auth/login' }: { children: React.Rea
         if (user === undefined) return;
         if (!user) {
             router.replace(`${redirect}?next=${pathname}`);
+        } else {
+            router.replace(pathname);
         }  
     }, [])
     return (

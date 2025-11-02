@@ -1,14 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 
 import allProduct from '@/app/data/products.json' 
-import { dbConnect } from "@/app/lib/mongodb";
 
 export async function GET(req : NextRequest ){
     let searchParams = req.nextUrl.searchParams; 
     let query : string = searchParams.get('query') ?? "";
-
-
-   
          
     let result = []
     for (const item of allProduct.products) {

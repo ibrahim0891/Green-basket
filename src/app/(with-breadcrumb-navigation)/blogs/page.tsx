@@ -3,8 +3,7 @@
 import React from 'react';
 import FilterButton from '../category/client-componets/FIlterButton';
 import FieldTitle from '../category/server-components/FieldTitle';
-import axiosInstance from '@/app/lib/axios';
-import BlogCard from './components/blogCard';
+import axiosInstance from '@/app/lib/axios'; 
 import { AxiosResponse } from 'axios';
 import BlogSection from './components/blogSection';
 import RecentBlogs from './components/RecentBlogs'; 
@@ -49,7 +48,7 @@ export const PopularTags = () => {
 }
 const BlogPage = async () => {
     let res: AxiosResponse = await axiosInstance.get('/api/blogs')
-    let { blogs } = res.data 
+    let  {blogs}  = res.data 
 
     
   

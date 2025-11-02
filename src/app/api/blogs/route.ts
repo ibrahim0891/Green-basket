@@ -1,4 +1,4 @@
-import blogs from '@/app/data/blogs.json'
+ 
 import { dbConnect } from '@/app/lib/mongodb'
 import { NextResponse } from 'next/server'
 import blogSchema from '../schema/blogSchema'

@@ -9,7 +9,7 @@ const BlogSection = ({ blogs }: { blogs: Blog[] }) => {
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6'>
             {
-                blogs.map((blog, index) => {
+                blogs?.map((blog, index) => {
                     return <BlogCard blog={blog} key={index} ></BlogCard>
                 })
             }

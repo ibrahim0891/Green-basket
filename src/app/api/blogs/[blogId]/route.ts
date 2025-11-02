@@ -1,5 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
-import allBlogs from "@/app/data/blogs.json";
+import { NextRequest, NextResponse } from "next/server"; 
 import { dbConnect } from "@/app/lib/mongodb";
 import blogSchema from "../../schema/blogSchema";
 

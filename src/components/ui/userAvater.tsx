@@ -1,16 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
-import userStore from "@/app/Store/userStore";
-import { Tooltip, TooltipProvider, TooltipTrigger } from "../lightswind/tooltip";
+import userStore from "@/app/Store/userStore"; 
 import { useRef } from "react";
 import Link from "next/link";
-
-let TooltipContent = ({ user }) => {
-    return <p className="text-center">
-        {user?.displayName}
-    </p>
-}
-
+ 
 const UserAvater = () => {
     const ref = useRef<HTMLImageElement>(null);
     const { user , logout} = userStore() as { user : User , logout : () => void}

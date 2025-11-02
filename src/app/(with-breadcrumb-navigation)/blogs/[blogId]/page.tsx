@@ -3,13 +3,12 @@
 
 
 import axiosInstance from '@/app/lib/axios';
-import React, { use } from 'react';
+import React  from 'react';
 import { Blog, OurGallary, PopularTags } from '../page';
 import { CategoryAndAuthor } from '../components/blogCard';
 import AuthorInfoSection from '../components/AuthorInfoSection';
-import { url } from 'inspector';
-import Button from '@/app/Components/Button';
-import RecentBlogDate from '../components/RecentBlogDate';
+ 
+import Button from '@/app/Components/Button'; 
 import RecentBlogs from '../components/RecentBlogs';
 
 

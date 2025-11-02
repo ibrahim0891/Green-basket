@@ -1,4 +1,4 @@
- 'use client'
+'use client'
 import Categories from "./components/categories"
 import LeftCarousel from "./components/LeftCarousel"
 import CategoryList from "./components/server/categoryList"

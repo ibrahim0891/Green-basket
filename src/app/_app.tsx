@@ -7,7 +7,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './lib/firebaseClient';
 
 const RootLayout = ({children} : {children: React.ReactNode}) => {
-    const {user , setUser } = userStore()
+    const {  setUser } = userStore()
 
     useEffect(() => {
         let subscribe =  onAuthStateChanged(auth, (user) => {

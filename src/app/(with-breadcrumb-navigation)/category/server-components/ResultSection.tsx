@@ -9,6 +9,7 @@ let productList = res.data;
 const ProductResultSection = ({ categoryId, setResultCount }) => {
     let products: Product[] = productList
 
+    console.log(productList);
     let selectedProduct = categoryId === 'all'
         ? products
         : products.filter(item => item.categoryId == categoryId);

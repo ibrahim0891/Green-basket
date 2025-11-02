@@ -3,8 +3,7 @@
 import { CaretRightIcon } from "@phosphor-icons/react";
 import { HouseIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
-import { Suspense } from "react";
+import Link from "next/link"; 
 
 const Layout = ({ children }: { children: React.JSX.Element }) => {
     let pathname = decodeURIComponent(usePathname());

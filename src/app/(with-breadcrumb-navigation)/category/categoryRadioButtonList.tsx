@@ -2,7 +2,7 @@ import axiosInstance from '@/app/lib/axios';
 import React from 'react';
 
 const res = await axiosInstance.get('/api/categories')
-const categories = res.data
+const  categories  = res.data
 
 const CategoryRadioButtonList = ({ setCategorySidebarOpen, selected, setSelected, setCategoryName }) => {
 

@@ -3,7 +3,7 @@
 
 import React from 'react';
 import { Blog } from '../page';
-import { ArrowRightIcon, ChatIcon, TagIcon, UsersIcon } from '@phosphor-icons/react';
+import { ArrowRightIcon,   TagIcon, UsersIcon } from '@phosphor-icons/react';
 import Link from 'next/link';
 
 export const CategoryAndAuthor = ({ category, author }: { category: string, author: string }) => {
@@ -14,7 +14,7 @@ export const CategoryAndAuthor = ({ category, author }: { category: string, auth
 }
 
 const BlogCard = ({ blog }: { blog: Blog }) => {
-    let { id, author, image, date: { day, month }, category, title } = blog
+    let { id, author , date: { day, month }, category, title } = blog
     return (
         <div className='rounded-md overflow-hidden border border-gray-200'>
             <div className='bg-gray-100 w-full aspect-[3/2]   rounded-md flex items-center object-cover justify-center text-gray-400 relative '>
