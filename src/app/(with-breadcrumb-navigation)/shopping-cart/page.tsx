@@ -7,7 +7,7 @@ import Protected from '@/app/_protected';
 
 const ShoppingCart = async () => {
     let res = await axiosInstance.get('/api/products')
-    let { products } = res.data
+    let  products  = res.data
 
   
     return (
