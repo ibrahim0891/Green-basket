@@ -6,11 +6,11 @@ import { Category } from "../categories";
 
  
 let res = await axiosInstance.get('/api/categories')
-let {categories : data} = res.data; 
+let data = res.data; 
 
 
 let CategoryList =  async  ({Icon}  : {Icon : Icon})  => {
-    console.log(data);
+   
   return <div className="">
       {data && data?.slice(0, 8).map((category: Category, index: number) => {
           const { name, id } = category;
