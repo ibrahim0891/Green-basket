@@ -2,7 +2,7 @@ import axiosInstance from '@/app/lib/axios';
 import React from 'react';
 
 const res = await axiosInstance.get('/api/categories')
-const { categories } = res.data
+const categories = res.data
 
 const CategoryRadioButtonList = ({ setCategorySidebarOpen, selected, setSelected, setCategoryName }) => {
 
@@ -29,7 +29,7 @@ const CategoryRadioButtonList = ({ setCategorySidebarOpen, selected, setSelected
                 </div>
             </label>
             {
-                categories.map((item) => {
+                categories?.map((item) => {
                     let { id, name, productCount } = item;
                     return <label key={id} className="flex items-center space-x-6  cursor-pointer active:scale-95 transition-all">
                         <input

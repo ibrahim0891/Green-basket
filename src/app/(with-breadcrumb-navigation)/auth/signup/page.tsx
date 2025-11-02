@@ -48,11 +48,11 @@ const SignUp = () => {
     }
     return (
         <div className='container-center'>
-            <h1 className='text-5xl text-center py-20'> Signup </h1>
+            <h1 className='text-5xl text-center py-10'> Signup </h1>
 
             {error && <p className='text-red-500 text-center'>{error.message}</p>}
 
-            <form className='bg-white border flex items-center justify-center max-w-md flex-col gap-4 p-8 m-auto my-12' onSubmit={handleSubmit}>
+            <form className='bg-white border flex items-center justify-center max-w-md flex-col gap-4 p-8 m-auto mb-12' onSubmit={handleSubmit}>
                 <input className='border p-6 px-8 text-gray-500 ' onChange={(e) => handleChange(e)} name='displayName' type="text" placeholder='Full name' required />
                 <input className='border p-6 px-8 text-gray-500 ' onChange={(e) => handleChange(e)} name='photoUrl' type="text" placeholder='Photo URL' required />
                 <input className='border p-6 px-8 text-gray-500 ' onChange={(e) => handleChange(e)} name='email' type="email" placeholder='Email Address' required />
@@ -66,7 +66,7 @@ const SignUp = () => {
                 </button>
             </form>
             <div className="py-5">
-                <p className='text-center text-gray-500'>Already have an account? <Link href={'/auth/login'} className='text-green-500 cursor-pointer'>Login</Link></p>
+            <p className='text-center text-gray-500'>Already have an account? <Link href={'/auth/login'} className='text-green-500 cursor-pointer'>Sign up </Link></p>
             </div>
         </div>
     );

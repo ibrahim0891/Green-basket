@@ -1,9 +1,11 @@
 import { NextResponse } from "next/server";
+  
+import { dbConnect } from "@/app/lib/mongodb";
+import productSchema from "../../schema/productSchema";
 
-import allProduct from '@/app/data/products.json'
 
-
-export function GET(){
-    let featured = allProduct.products.slice(0, 5)
+export async function GET(){
+    await dbConnect()
+    let featured = await productSchema.find().limit(5)
     return NextResponse.json(featured)
 }

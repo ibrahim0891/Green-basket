@@ -48,7 +48,10 @@ const AddToCart = ({ item }: { item: Product }) => {
     };
 
     const handleAddToCart = (id) => {
-        if (selectCount === 0) return;
+        if (selectCount === 0) {
+            toast.warning('Please select at least one item!')
+            return
+        };
 
         let cartString = localStorage.getItem('cart')
         let parsedCart = cartString ? JSON.parse(cartString) : []

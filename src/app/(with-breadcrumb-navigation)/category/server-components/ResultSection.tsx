@@ -7,7 +7,7 @@ let res = await axiosInstance.get('/api/products')
 let productList = res.data;
 
 const ProductResultSection = ({ categoryId, setResultCount }) => {
-    let products: Product[] = productList?.products
+    let products: Product[] = productList
 
     let selectedProduct = categoryId === 'all'
         ? products

@@ -1,6 +1,10 @@
-import { NextResponse } from "next/server";
-import allReviews from '@/app/data/reviews.json'
+import { NextResponse } from "next/server"; 
+import { dbConnect } from "@/app/lib/mongodb";
+import reviewSchema from "../schema/reviewSchema";
 
-export  function GET(){
+export async function GET(){
+    await dbConnect()
+    let allReviews = await reviewSchema.find()
+
     return NextResponse.json(allReviews)
 }

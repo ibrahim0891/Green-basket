@@ -1,14 +1,20 @@
-import { NextRequest, NextResponse } from "next/server";
-import allReviews from "@/app/data/reviews.json";
-import { Review } from "@/app/(with-breadcrumb-navigation)/product/[id]/page";
+import { NextRequest, NextResponse } from "next/server"; 
+import reviewSchema from "../../schema/reviewSchema";
+import { dbConnect } from "@/app/lib/mongodb";
 
 export async function GET(
     request: NextRequest,
     context: { params: { productId: number } }
 ) {
+    await dbConnect()
     let { productId } = await context.params;
-    let selectedProductReview: Review[] = allReviews.reviews.filter(
-        (review) => review.productId == productId
-    ); 
-    return NextResponse.json( selectedProductReview);
+     
+    try {
+        let selectedProductReview = await reviewSchema.find({productId : productId})
+        return NextResponse.json( selectedProductReview);
+    } catch (error) {
+        console.log({error});
+    }
+
+    
 }

@@ -51,6 +51,7 @@ const BlogPage = async () => {
     let res: AxiosResponse = await axiosInstance.get('/api/blogs')
     let { blogs } = res.data 
 
+    
   
     return (
         <div className='min-h-screen'>

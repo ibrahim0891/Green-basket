@@ -1,8 +1,12 @@
 import { NextResponse } from "next/server";
 
-import allProduct from '@/app/data/products.json'
+ 
+import { dbConnect } from "@/app/lib/mongodb";
+import productSchema from "../schema/productSchema";
 
 
-export function GET(){
+export async function GET(){
+    await dbConnect(); 
+    let allProduct = await productSchema.find()
     return NextResponse.json(allProduct)
 }

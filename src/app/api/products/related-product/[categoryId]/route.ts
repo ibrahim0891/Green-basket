@@ -1,5 +1,6 @@
-import { Product } from "@/app/(Main-pages)/home/components/ProductCard";
-import allProduct from "@/app/data/products.json";
+ 
+import productSchema from "@/app/api/schema/productSchema";
+import { dbConnect } from "@/app/lib/mongodb";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(
@@ -8,9 +9,11 @@ export async function GET(
 ) {
     let { categoryId } = await context.params;
 
-    let reletedProduct = allProduct.products
-        .filter((product) => product.categoryId == categoryId)
-        .slice(0, 5);
+    await dbConnect(); 
+     
+    let reletedProduct = await productSchema
+        .find({ categoryId: categoryId })
+        .limit(5);
     console.log(reletedProduct);
     return NextResponse.json(reletedProduct);
 }

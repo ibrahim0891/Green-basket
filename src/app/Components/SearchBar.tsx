@@ -49,7 +49,7 @@ const SearchBar = ({ setIsSearchOpen , recentSearch , setRecentSearch }: { setIs
                 <div>
                     <MagnifyingGlassIcon className='mx-3' />
                 </div>
-                <input autoFocus type="search" placeholder='search' name='search' onChange={(e) => setUserInput(e.target.value)} className='focus:outline-none py-2 w-full md:w-auto' />
+                <input autoFocus type="search" placeholder='try "apple" ' name='search' onChange={(e) => setUserInput(e.target.value)} className='focus:outline-none py-2 w-full md:w-auto' />
                 <button className='bg-green-500 text-white px-6 py-2 hidden md:block' onClick={(e) => handleSubmit(e)}>  Search </button>
                 <button className=' p-3 border-r border-gray-200 md:hidden' onClick={(e) => handleSubmit(e)}>  <MagnifyingGlassIcon /> </button>
                 <button className=' p-3 md:hidden' onClick={() => setIsSearchOpen(false)}>   <XIcon /> </button>
