@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import SearchBar from './SearchBar';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import UserAvater from '@/components/ui/userAvater';
 
 type NavItem = {
     name: string, link: string, downArray: boolean
@@ -16,7 +17,7 @@ const navData: NavItem[] = [
     { name: "Home", link: "/", downArray: true },
     { name: "Blogs", link: "/blogs", downArray: true },
     { name: "Products", link: "/category/All Product?id=all", downArray: true },
-    { name: "Login", link: "/auth/login", downArray: false },
+     
     { name: "About Us", link: "/about", downArray: false },
 ];
 
@@ -89,6 +90,10 @@ const Nav = () => {
                         <Link href={'/shopping-cart'} className='flex items-center gap-4'>
                             <ShoppingCartIcon />
                         </Link>
+                        <div>
+                            {/* user avater  */}
+                            <UserAvater/>
+                        </div>
                     </div>
                 </div>
 
@@ -116,7 +121,7 @@ const Nav = () => {
                             <PhoneCallIcon size={32} />
                             <a href="tel:+880 1735 699781">
                                 <span className='text-gray-600'>
-                                    +880 1735 699781
+                                    +880 1834 667996
                                 </span>
                             </a>
                         </button>

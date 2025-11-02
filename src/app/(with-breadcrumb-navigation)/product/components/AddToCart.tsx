@@ -4,6 +4,7 @@
 'use client'
 
 import { Product } from '@/app/(Main-pages)/home/components/ProductCard';
+import userStore from '@/app/Store/userStore';
 import { MinusIcon, PlusIcon } from '@phosphor-icons/react';
 import React, { useEffect, useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
@@ -14,6 +15,8 @@ export type Cart = {
 }
 
 const AddToCart = ({ item }: { item: Product }) => {
+    const { user } = userStore()
+    console.log(user);
     const { brand, categoryId, id, price, name, stockStatus } = item
     const [selectCount, setSelectCount] = useState<number>(0);
 

@@ -7,7 +7,7 @@ import axiosInstance from '@/app/lib/axios';
 import BlogCard from './components/blogCard';
 import { AxiosResponse } from 'axios';
 import BlogSection from './components/blogSection';
-import RecentBlogs from './components/RecentBlogs';
+import RecentBlogs from './components/RecentBlogs'; 
 
 export type Blog = {
     id: number;
@@ -50,6 +50,8 @@ export const PopularTags = () => {
 const BlogPage = async () => {
     let res: AxiosResponse = await axiosInstance.get('/api/blogs')
     let { blogs } = res.data 
+
+  
     return (
         <div className='min-h-screen'>
             <div className='container-center py-10'>
